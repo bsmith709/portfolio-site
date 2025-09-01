@@ -31,20 +31,6 @@
       ]
     },
     {
-      name: 'Tertiary Colors',
-      colors: [
-        { name: 'Tertiary-100', class: 'bg-tertiary-100' },
-        { name: 'Tertiary-200', class: 'bg-tertiary-200' },
-        { name: 'Tertiary-300', class: 'bg-tertiary-300' },
-        { name: 'Tertiary-400', class: 'bg-tertiary-400' },
-        { name: 'Tertiary-500', class: 'bg-tertiary-500' },
-        { name: 'Tertiary-600', class: 'bg-tertiary-600' },
-        { name: 'Tertiary-700', class: 'bg-tertiary-700' },
-        { name: 'Tertiary-800', class: 'bg-tertiary-800' },
-        { name: 'Tertiary-900', class: 'bg-tertiary-900' }
-      ]
-    },
-    {
       name: 'Semantic Colors',
       colors: [
         { name: 'Success-100', class: 'bg-semantic-green-100' },
@@ -96,21 +82,19 @@
 
 </script>
 
-<div class="bg-neutral-100 min-h-screen w-full font-sans">
+<div class="bg-neutral-900 min-h-screen w-full font-serif">
   <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-    
+
+    <!-- Page header -->
     <header class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-900">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-main-300">
         Color Palette
       </h1>
-      <p class="mt-4 text-lg text-neutral-900">
-        A collection of beautiful colors, styled with Tailwind CSS.
-      </p>
     </header>
 
     <!-- Responsive grid for the color palettes -->
      {#each palettes as palette}
-      <h2 class="text-2xl font-semibold text-neutral-900 mb-4">{palette.name}</h2>
+      <h2 class="text-2xl font-semibold text-neutral-100 mb-4">{palette.name}</h2>
       <div class="grid grid-cols-9 gap-6 sm:gap-8 mb-12">
         {#each palette.colors as color}
           <button 
