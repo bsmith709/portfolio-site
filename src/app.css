@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+
+@theme {
+  --color-main-900: hsl(15 75% 22%);
+  --color-main-800: hsl(20 75% 28%);
+  --color-main-700: hsl(22 80% 35%);
+  --color-main-600: hsl(25 80% 45%);
+  --color-main-500: hsl(27 88% 52%);
+  --color-main-400: hsl(29 95% 62%);
+  --color-main-300: hsl(33 100% 72%);
+  --color-main-200: hsl(35 100% 82%);
+  --color-main-100: hsl(37 100% 90%);
+
+  --color-secondary-900: hsl(210 50% 25%);
+  --color-secondary-800: hsl(208 60% 30%);
+  --color-secondary-700: hsl(205 70% 35%);
+  --color-secondary-600: hsl(200 80% 40%);
+  --color-secondary-500: hsl(196 90% 45%);
+  --color-secondary-400: hsl(194 95% 55%);
+  --color-secondary-300: hsl(192 100% 70%);
+  --color-secondary-200: hsl(190 100% 85%);
+  --color-secondary-100: hsl(190 100% 95%);
+
+  --color-tertiary-900: hsl(300 40% 30%);
+  --color-tertiary-800: hsl(302 48% 35%);
+  --color-tertiary-700: hsl(305 55% 40%);
+  --color-tertiary-600: hsl(307 55% 55%);
+  --color-tertiary-500: hsl(310, 70%, 65%);
+  --color-tertiary-400: hsl(315 80% 75%);
+  --color-tertiary-300: hsl(318 100% 85%);
+  --color-tertiary-200: hsl(320 100% 90%);
+  --color-tertiary-100: hsl(325 100% 95%);
+
+  --color-semantic-green-900: hsl(120 40% 20%);
+  --color-semantic-green-800: hsl(128 48% 25%);
+  --color-semantic-green-700: hsl(135 55% 30%);
+  --color-semantic-green-600: hsl(140 60% 38%);
+  --color-semantic-green-500: hsl(145 65% 45%);
+  --color-semantic-green-400: hsl(145 70% 53%);
+  --color-semantic-green-300: hsl(145 80% 60%);
+  --color-semantic-green-200: hsl(152 95% 75%);
+  --color-semantic-green-100: hsl(155 100% 88%);
+
+  --color-semantic-yellow-900: hsl(35 60% 25%);
+  --color-semantic-yellow-800: hsl(37 69% 35%);
+  --color-semantic-yellow-700: hsl(41 78% 45%);
+  --color-semantic-yellow-600: hsl(45 90% 55%);
+  --color-semantic-yellow-500: hsl(48 95% 60%);
+  --color-semantic-yellow-400: hsl(50 100% 65%);
+  --color-semantic-yellow-300: hsl(52 100% 70%);
+  --color-semantic-yellow-200: hsl(55 100% 80%);
+  --color-semantic-yellow-100: hsl(60 100% 90%);
+
+  --color-semantic-red-900: hsl(0 40% 25%);
+  --color-semantic-red-800: hsl(0 50% 33%);
+  --color-semantic-red-700: hsl(0 60% 40%);
+  --color-semantic-red-600: hsl(0 70% 45%);
+  --color-semantic-red-500: hsl(0 80% 55%);
+  --color-semantic-red-400: hsl(0 90% 62%);
+  --color-semantic-red-300: hsl(355 95% 68%);
+  --color-semantic-red-200: hsl(355 100% 80%);
+  --color-semantic-red-100: hsl(355 100% 92%);
+
+  --color-neutral-900: hsl(30 5% 15%); /* For darkest text */
+  --color-neutral-800: hsl(30 5% 22%);
+  --color-neutral-700: hsl(30 6% 31%);  /* For secondary text */
+  --color-neutral-600: hsl(30 7% 42%);
+  --color-neutral-500: hsl(30 8% 54%);  /* For borders/dividers */
+  --color-neutral-400: hsl(30 9% 69%);
+  --color-neutral-300: hsl(30 10% 80%);
+  --color-neutral-200: hsl(30 11% 86%); /* For subtle panels */
+  --color-neutral-100: hsl(30 12% 95%); /* For main background */
+}
