@@ -145,6 +145,11 @@
     { name: '8px', class: 'border-8' }
   ];
 
+  const gradients = [
+    { name: 'Main Gradient', class: 'bg-gradient-main' },
+    { name: 'Secondary Gradient', class: 'bg-gradient-secondary' }
+  ];
+
 </script>
 
 <div class="bg-neutral-800 min-h-screen w-full font-serif">
@@ -152,7 +157,7 @@
 
     <!-- Section header -->
     <header class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-main-300">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-gradient-main">
         Color Palette
       </h1>
     </header>
@@ -190,7 +195,7 @@
 
     <!-- Section header -->
     <header class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-main-300">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-gradient-main">
         Typography
       </h1>
     </header>
@@ -225,7 +230,7 @@
       <div class="grid grid-cols-5 space-y-6 text-center">
         {#each lineHeights as line}
           <div class="{line.class} text-neutral-100 text-lg max-w-2xl mx-auto">
-              <p class="font-extrabold text-secondary-400">{line.name}</p> <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+              <p class="font-extrabold text-gradient-secondary">{line.name}</p> <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
           </div>
         {/each}
       </div>
@@ -237,7 +242,7 @@
       <div class="grid grid-cols-5 space-y-6 text-center">
         {#each letterSpacing as letter}
           <div class="{letter.class} text-neutral-100 text-lg max-w-2xl mx-auto">
-              <p class="font-extrabold text-secondary-400">{letter.name}</p> <p>The quick brown fox jumps over the lazy dog.</p>
+              <p class="font-extrabold text-gradient-secondary">{letter.name}</p> <p>The quick brown fox jumps over the lazy dog.</p>
           </div>
         {/each}
       </div>
@@ -248,7 +253,7 @@
 
     <!-- Section header -->
     <header class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-main-300">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-gradient-main">
         Spacing and Borders
       </h1>
     </header>
@@ -278,4 +283,25 @@
     </section>
   </div>
 
+  <div class="max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
+
+    <!-- Section header -->
+    <header class="text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-gradient-main">
+        Gradients
+      </h1>
+    </header>
+
+    <!-- Gradients -->
+    <section class="mb-7">
+      <div class="grid grid-cols-2 gap-10 space-y-6">
+        {#each gradients as gradient}
+          <div class="text-center">
+            <p class="font-semibold text-gradient-secondary mb-4">{gradient.name}</p>
+            <div class="h-10 {gradient.class} rounded-lg"></div>
+          </div>
+        {/each}
+      </div>
+    </section>
+  </div>
 </div>
