@@ -67,8 +67,8 @@
     {
       name: 'Neutral Colors',
       colors: [
-        { name: 'Neutral-200', class: 'bg-neutral-200' },
         { name: 'Neutral-100', class: 'bg-neutral-100' },
+        { name: 'Neutral-200', class: 'bg-neutral-200' },
         { name: 'Neutral-300', class: 'bg-neutral-300' },
         { name: 'Neutral-400', class: 'bg-neutral-400' },
         { name: 'Neutral-500', class: 'bg-neutral-500' },
@@ -89,7 +89,9 @@
     { name: '2XL', class: 'text-2xl' },
     { name: '3XL', class: 'text-3xl' },
     { name: '4XL', class: 'text-4xl' },
-    { name: '5XL', class: 'text-5xl' }
+    { name: '5XL', class: 'text-5xl' },
+    { name: '6XL', class: 'text-6xl' },
+    { name: '7XL', class: 'text-7xl' }
   ];
 
   const fontStyles = [
@@ -227,10 +229,10 @@
     <!-- Line Heights -->
     <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Line Heights</h2>
-      <div class="grid grid-cols-5 space-y-6 text-center">
+      <div class="grid grid-cols-5 gap-6 text-center items-start">
         {#each lineHeights as line}
-          <div class="{line.class} text-neutral-100 text-lg max-w-2xl mx-auto">
-              <p class="font-extrabold text-gradient-secondary">{line.name}</p> <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+          <div class="text-neutral-100 text-lg max-w-2xl mx-auto">
+              <p class="font-extrabold text-gradient-secondary">{line.name}</p> <p class="{line.class}">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
           </div>
         {/each}
       </div>
@@ -260,7 +262,7 @@
 
     <!-- Spacing Scale -->
     <section class="mb-7">
-      <h2 class="text-2xl font-semibold text-main-100 mb-4">Padding Scale</h2>
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">Spacing Scale</h2>
       <div class="grid grid-cols-[auto_1fr] gap-2 space-y-6">
         {#each spacingScale as space}
           <p class="font-semibold text-neutral-100">{space.name}: </p>
@@ -275,7 +277,7 @@
       <div class="grid grid-cols-4 gap-10 space-y-6">
         {#each borderWidths as border}
           <div class="text-center">
-            <p class="font-semibold text-neutral-100">{border.name}</p>
+            <p class="font-semibold text-neutral-100 mb-2">{border.name}</p>
             <div class="bg-neutral-700 border-neutral-500 aspect-square border {border.class}"></div>
           </div>
         {/each}
@@ -294,7 +296,7 @@
 
     <!-- Gradients -->
     <section class="mb-7">
-      <div class="grid grid-cols-2 gap-10 space-y-6">
+      <div class="grid grid-cols-2 gap-10">
         {#each gradients as gradient}
           <div class="text-center">
             <p class="font-semibold text-gradient-secondary mb-4">{gradient.name}</p>
