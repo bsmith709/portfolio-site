@@ -67,15 +67,15 @@
     {
       name: 'Neutral Colors',
       colors: [
-        { name: 'neutral-100', class: 'bg-neutral-100' },
-        { name: 'neutral-200', class: 'bg-neutral-200' },
-        { name: 'neutral-300', class: 'bg-neutral-300' },
-        { name: 'neutral-400', class: 'bg-neutral-400' },
-        { name: 'neutral-500', class: 'bg-neutral-500' },
-        { name: 'neutral-600', class: 'bg-neutral-600' },
-        { name: 'neutral-700', class: 'bg-neutral-700' },
-        { name: 'neutral-800', class: 'bg-neutral-800' },
-        { name: 'neutral-900', class: 'bg-neutral-900' }
+        { name: 'Neutral-200', class: 'bg-neutral-200' },
+        { name: 'Neutral-100', class: 'bg-neutral-100' },
+        { name: 'Neutral-300', class: 'bg-neutral-300' },
+        { name: 'Neutral-400', class: 'bg-neutral-400' },
+        { name: 'Neutral-500', class: 'bg-neutral-500' },
+        { name: 'Neutral-600', class: 'bg-neutral-600' },
+        { name: 'Neutral-700', class: 'bg-neutral-700' },
+        { name: 'Neutral-800', class: 'bg-neutral-800' },
+        { name: 'Neutral-900', class: 'bg-neutral-900' }
       ]
     }
   ];
@@ -118,10 +118,37 @@
     { name: 'Widest', class: 'tracking-widest' }
   ];
 
+  const spacingScale = [
+    { name: 'px', class: 'w-px' },
+    { name: '1', class: 'w-1' },
+    { name: '2', class: 'w-2' },
+    { name: '3', class: 'w-3' },
+    { name: '4', class: 'w-4' },
+    { name: '5', class: 'w-5' },
+    { name: '6', class: 'w-6' },
+    { name: '7', class: 'w-7' },
+    { name: '8', class: 'w-8' },
+    { name: '9', class: 'w-9' },
+    { name: '10', class: 'w-10' },
+    { name: '11', class: 'w-11' },
+    { name: '12', class: 'w-12' },
+    { name: '13', class: 'w-13' },
+    { name: '14', class: 'w-14' },
+    { name: '15', class: 'w-15' },
+    { name: '16', class: 'w-16' }
+  ];
+
+  const borderWidths = [
+    { name: '0px', class: 'border-0' },
+    { name: '2px', class: 'border-2' },
+    { name: '4px', class: 'border-4' },
+    { name: '8px', class: 'border-8' }
+  ];
+
 </script>
 
-<div class="bg-neutral-900 min-h-screen w-full font-serif">
-  <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+<div class="bg-neutral-800 min-h-screen w-full font-serif">
+  <div class="max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
 
     <!-- Section header -->
     <header class="text-center">
@@ -133,7 +160,7 @@
     <!-- Responsive grid for the color palettes -->
      {#each palettes as palette}
       <h2 class="text-2xl font-semibold text-main-100 mb-4">{palette.name}</h2>
-      <div class="grid grid-cols-9 gap-6 sm:gap-8 mb-12">
+      <div class="grid grid-cols-9 gap-3 sm:gap-4 mb-4">
         {#each palette.colors as color}
           <button 
             class="relative group"
@@ -141,7 +168,7 @@
             tabindex="0"
           >
 
-            <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-neutral-100 text-xs font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
+            <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-neutral-100 text-base font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
               {color.name}
             </span>
 
@@ -159,7 +186,7 @@
 
   </div>
 
-  <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+  <div class="max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
 
     <!-- Section header -->
     <header class="text-center">
@@ -169,7 +196,7 @@
     </header>
 
     <!-- Font Scale -->
-    <section class="mb-12">
+    <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Font Scale</h2>
       <div class="space-y-6 text-center">
         {#each fontScale as font}
@@ -181,11 +208,11 @@
     </section>
 
     <!-- Font Weights -->
-    <section class="mb-12">
+    <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Font Weights</h2>
       <div class="space-y-6 text-center">
         {#each fontStyles as style}
-          <div class="grid grid-cols-2 gap-12 {style.class} text-neutral-100 text-xl">
+          <div class="grid grid-cols-2 gap-7 {style.class} text-neutral-100 text-xl">
               <p>{style.name} - The quick brown fox jumps over the lazy dog.</p> <p class="italic">{style.name} Italic - The quick brown fox jumps over the lazy dog.</p>
           </div>
         {/each}
@@ -193,7 +220,7 @@
     </section>
 
     <!-- Line Heights -->
-    <section class="mb-12">
+    <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Line Heights</h2>
       <div class="grid grid-cols-5 space-y-6 text-center">
         {#each lineHeights as line}
@@ -205,7 +232,7 @@
     </section>
 
     <!-- Letter Spacing -->
-    <section class="mb-12">
+    <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Letter Spacing</h2>
       <div class="grid grid-cols-5 space-y-6 text-center">
         {#each letterSpacing as letter}
@@ -216,5 +243,39 @@
       </div>
     </section>
   </div> 
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
+
+    <!-- Section header -->
+    <header class="text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-main-300">
+        Spacing and Borders
+      </h1>
+    </header>
+
+    <!-- Spacing Scale -->
+    <section class="mb-7">
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">Padding Scale</h2>
+      <div class="grid grid-cols-[auto_1fr] gap-2 space-y-6">
+        {#each spacingScale as space}
+          <p class="font-semibold text-neutral-100">{space.name}: </p>
+          <div class="bg-neutral-500 h-5 {space.class}"></div>
+        {/each}
+      </div>
+    </section>
+
+    <!-- Border Widths -->
+    <section class="mb-7">
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">Border Widths</h2>
+      <div class="grid grid-cols-4 gap-10 space-y-6">
+        {#each borderWidths as border}
+          <div class="text-center">
+            <p class="font-semibold text-neutral-100">{border.name}</p>
+            <div class="bg-neutral-700 border-neutral-500 aspect-square border {border.class}"></div>
+          </div>
+        {/each}
+      </div>
+    </section>
+  </div>
 
 </div>
