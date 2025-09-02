@@ -80,21 +80,59 @@
     }
   ];
 
+  const fontScale = [
+    { name: 'XS', class: 'text-xs' },
+    { name: 'SM', class: 'text-sm' },
+    { name: 'Base', class: 'text-base' },
+    { name: 'LG', class: 'text-lg' },
+    { name: 'XL', class: 'text-xl' },
+    { name: '2XL', class: 'text-2xl' },
+    { name: '3XL', class: 'text-3xl' },
+    { name: '4XL', class: 'text-4xl' },
+    { name: '5XL', class: 'text-5xl' }
+  ];
+
+  const fontStyles = [
+    { name: 'Extra Light', class: 'font-extralight' },
+    { name: 'Light', class: 'font-light' },
+    { name: 'Normal', class: 'font-normal' },
+    { name: 'Medium', class: 'font-medium' },
+    { name: 'Semi Bold', class: 'font-semibold' },
+    { name: 'Bold', class: 'font-bold' },
+    { name: 'Extra Bold', class: 'font-extrabold' },
+  ];
+
+  const lineHeights = [
+    { name: 'Tight', class: 'leading-tight' },
+    { name: 'Snug', class: 'leading-snug' },
+    { name: 'Normal', class: 'leading-normal' },
+    { name: 'Relaxed', class: 'leading-relaxed' },
+    { name: 'Loose', class: 'leading-loose' }
+  ];
+
+  const letterSpacing = [
+    { name: 'Tight', class: 'tracking-tighter' },
+    { name: 'Normal', class: 'tracking-normal' },
+    { name: 'Wide', class: 'tracking-wide' },
+    { name: 'Wider', class: 'tracking-wider' },
+    { name: 'Widest', class: 'tracking-widest' }
+  ];
+
 </script>
 
 <div class="bg-neutral-900 min-h-screen w-full font-serif">
   <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
 
-    <!-- Page header -->
+    <!-- Section header -->
     <header class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-main-300">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-main-300">
         Color Palette
       </h1>
     </header>
 
     <!-- Responsive grid for the color palettes -->
      {#each palettes as palette}
-      <h2 class="text-2xl font-semibold text-neutral-100 mb-4">{palette.name}</h2>
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">{palette.name}</h2>
       <div class="grid grid-cols-9 gap-6 sm:gap-8 mb-12">
         {#each palette.colors as color}
           <button 
@@ -103,7 +141,7 @@
             tabindex="0"
           >
 
-            <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-white text-xs font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
+            <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-neutral-100 text-xs font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
               {color.name}
             </span>
 
@@ -120,5 +158,63 @@
     {/each}
 
   </div>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+    <!-- Section header -->
+    <header class="text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-main-300">
+        Typography
+      </h1>
+    </header>
+
+    <!-- Font Scale -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">Font Scale</h2>
+      <div class="space-y-6 text-center">
+        {#each fontScale as font}
+          <div class="{font.class} text-neutral-100">
+            <p class="font-semibold">{font.name} - The quick brown fox jumps over the lazy dog.</p>
+          </div>
+        {/each}
+      </div>
+    </section>
+
+    <!-- Font Weights -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">Font Weights</h2>
+      <div class="space-y-6 text-center">
+        {#each fontStyles as style}
+          <div class="grid grid-cols-2 gap-12 {style.class} text-neutral-100 text-xl">
+              <p>{style.name} - The quick brown fox jumps over the lazy dog.</p> <p class="italic">{style.name} Italic - The quick brown fox jumps over the lazy dog.</p>
+          </div>
+        {/each}
+      </div>
+    </section>
+
+    <!-- Line Heights -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">Line Heights</h2>
+      <div class="grid grid-cols-5 space-y-6 text-center">
+        {#each lineHeights as line}
+          <div class="{line.class} text-neutral-100 text-lg max-w-2xl mx-auto">
+              <p class="font-extrabold text-secondary-400">{line.name}</p> <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+          </div>
+        {/each}
+      </div>
+    </section>
+
+    <!-- Letter Spacing -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-main-100 mb-4">Letter Spacing</h2>
+      <div class="grid grid-cols-5 space-y-6 text-center">
+        {#each letterSpacing as letter}
+          <div class="{letter.class} text-neutral-100 text-lg max-w-2xl mx-auto">
+              <p class="font-extrabold text-secondary-400">{letter.name}</p> <p>The quick brown fox jumps over the lazy dog.</p>
+          </div>
+        {/each}
+      </div>
+    </section>
+  </div> 
 
 </div>
