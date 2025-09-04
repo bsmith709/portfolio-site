@@ -276,7 +276,7 @@
     <!-- Border Widths -->
     <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Border Widths</h2>
-      <div class="grid grid-cols-4 gap-10 space-y-6">
+      <div class="grid grid-cols-4 gap-6 sm:gap-8 lg:gap-8">
         {#each borderWidths as border}
           <div class="text-center">
             <p class="font-semibold text-neutral-100 mb-2">{border.name}</p>
@@ -318,10 +318,9 @@
 
   <section class="mb-7">
     <h2 class="text-2xl font-semibold text-main-100 mb-4">Buttons</h2>
-    <div class="grid grid-cols-3 gap-6 lg:grid-cols-6">
+    <div class="grid grid-cols-3 gap-6 lg:grid-cols-5">
       <Button variant="primary" size="sm">Primary Button</Button>
       <Button variant="secondary" size="sm">Secondary Button</Button>
-      <Button variant="destructive" size="sm">Destructive Button</Button>
       <Button variant="outline" size="sm">Outline Button</Button>
       <Button variant="ghost" size="sm">Ghost Button</Button>
       <Button variant="link" size="sm">Link Button</Button>

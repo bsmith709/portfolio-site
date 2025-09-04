@@ -5,7 +5,7 @@
    */
 
   // Define the types for the component's props for strong type safety.
-  type Variant = 'primary' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link';
+  type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
   type Size = 'sm' | 'md' | 'lg' | 'icon';
   type ButtonType = 'button' | 'submit' | 'reset';
 
@@ -33,18 +33,17 @@
   // Base classes applied to all buttons for a consistent foundation.
   const baseClasses = `
     inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-serif
-    transition-background-position duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
-    disabled:pointer-events-none disabled:opacity-50
+    transition-background-position transform-transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+    disabled:pointer-events-none disabled:opacity-50 hover:scale-102 active:scale-95
   `;
 
   // Classes for different visual styles (variants).
   const variantClasses: Record<Variant, string> = {
     primary: 'text-main-900 bg-gradient-main bg-[length:100%_300%] bg-no-repeat bg-center active:bg-bottom hover:bg-top',
-    secondary: 'bg-slate-200 text-slate-900 hover:bg-slate-200/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80',
-    destructive: 'bg-red-500 text-slate-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90',
-    outline: 'border border-slate-300 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-50',
-    ghost: 'hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50',
-    link: 'text-slate-900 underline-offset-4 hover:underline dark:text-slate-50',
+    secondary: 'text-secondary-900 bg-gradient-secondary bg-[length:100%_300%] bg-no-repeat bg-center active:bg-bottom hover:bg-top',
+    outline: 'border border-neutral-300 text-neutral-300 bg-transparent hover:bg-neutral-300 hover:border-neutral-300 hover:text-neutral-900 active:bg-neutral-400 active:border-neutral-400 active:text-neutral-900',
+    ghost: 'text-neutral-400 hover:bg-neutral-600 hover:text-neutral-100 active:bg-neutral-700 active:text-neutral-400',
+    link: 'text-neutral-100 underline-offset-4 hover:underline',
   };
 
   // Classes for different button sizes.
