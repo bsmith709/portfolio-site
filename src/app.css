@@ -110,8 +110,14 @@
   --border-width-4: 4px;
   --border-width-8: 8px;
 
-   --background-image-gradient-main: linear-gradient(135deg, var(--color-main-100) 0%, var(--color-main-300) 50%, var(--color-main-500) 100%);
-   --background-image-gradient-secondary: linear-gradient(135deg, var(--color-secondary-100) 0%, var(--color-secondary-400) 50%, var(--color-secondary-600) 100%);
+  --background-image-gradient-main: linear-gradient(135deg, var(--color-main-100) 0%, var(--color-main-300) 50%, var(--color-main-500) 100%);
+  --background-image-gradient-secondary: linear-gradient(135deg, var(--color-secondary-100) 0%, var(--color-secondary-400) 50%, var(--color-secondary-600) 100%);
+}
+
+@property --gradient-middle-pos {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 40%;
 }
 
 @layer utilities {

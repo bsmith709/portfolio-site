@@ -1,6 +1,8 @@
 <script lang="ts">
   // An array of Tailwind CSS background color classes.
   // Using the full class name ensures Tailwind's JIT compiler will include them in the final CSS.
+  import Button from '$lib/components/Button.svelte';
+
   const palettes = [
     {
       name: 'Main Colors',
@@ -181,11 +183,11 @@
 
             <!-- The main color splotch -->
             <div 
-              class="aspect-square shadow-lg transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-xl group-focus:scale-110 group-focus:shadow-xl {color.class}"
+              class="aspect-square shadow-lg rounded-xl transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-xl group-focus:scale-110 group-focus:shadow-xl {color.class}"
             ></div>
             
             <!-- A subtle border effect on hover/focus -->
-            <div class="absolute inset-0 border-4 border-transparent group-hover:border-white/50 group-focus:border-white/50 transition-all duration-300"></div>
+            <div class="absolute rounded-xl inset-0 border-4 border-transparent group-hover:border-white/50 group-focus:border-white/50 transition-all duration-300"></div>
           </button>
         {/each}
       </div>
@@ -305,5 +307,25 @@
         {/each}
       </div>
     </section>
+  </div>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
+    <header class="text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide text-gradient-main">
+        Components
+      </h1>
+    </header>
+
+  <section class="mb-7">
+    <h2 class="text-2xl font-semibold text-main-100 mb-4">Buttons</h2>
+    <div class="grid grid-cols-3 gap-6 lg:grid-cols-6">
+      <Button variant="primary" size="sm">Primary Button</Button>
+      <Button variant="secondary" size="sm">Secondary Button</Button>
+      <Button variant="destructive" size="sm">Destructive Button</Button>
+      <Button variant="outline" size="sm">Outline Button</Button>
+      <Button variant="ghost" size="sm">Ghost Button</Button>
+      <Button variant="link" size="sm">Link Button</Button>
+    </div>
+  </section>
   </div>
 </div>
