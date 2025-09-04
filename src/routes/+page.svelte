@@ -2,6 +2,7 @@
   // An array of Tailwind CSS background color classes.
   // Using the full class name ensures Tailwind's JIT compiler will include them in the final CSS.
   import Button from '$lib/components/Button.svelte';
+  import Icon from '$lib/components/Icon.svelte';
 
   const palettes = [
     {
@@ -154,9 +155,14 @@
     { name: 'Secondary Gradient', class: 'bg-gradient-secondary' }
   ];
 
+  const buttons = {
+    variant: ['primary', 'secondary', 'outline', 'ghost', 'link'],
+    size: ['sm', 'md', 'lg', 'icon']
+  }
+
 </script>
 
-<div class="bg-neutral-800 min-h-screen w-full font-serif">
+<div class="bg-neutral-900 min-h-screen w-full font-serif">
   <div class="max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
 
     <!-- Section header -->
@@ -265,7 +271,7 @@
     <!-- Spacing Scale -->
     <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Spacing Scale</h2>
-      <div class="overflow-x-auto grid grid-cols-[auto_1fr] gap-2 space-y-6">
+      <div class="overflow-x-auto grid grid-cols-[auto_1fr] gap-6">
         {#each spacingScale as space}
           <p class="font-semibold text-neutral-100">{space.name}: </p>
           <div class="bg-neutral-500 h-5 {space.class}"></div>
@@ -318,13 +324,20 @@
 
   <section class="mb-7">
     <h2 class="text-2xl font-semibold text-main-100 mb-4">Buttons</h2>
-    <div class="grid grid-cols-3 gap-6 lg:grid-cols-5">
-      <Button variant="primary" size="sm">Primary Button</Button>
-      <Button variant="secondary" size="sm">Secondary Button</Button>
-      <Button variant="outline" size="sm">Outline Button</Button>
-      <Button variant="ghost" size="sm">Ghost Button</Button>
-      <Button variant="link" size="sm">Link Button</Button>
-    </div>
+    <div class="grid grid-cols-[auto_1fr] gap-6 items-center">
+      {#each buttons.size as size}
+      <p class="font-semibold text-gradient-secondary">{size}:</p>
+      <div class="grid grid-cols-3 gap-x-8 gap-y-4 lg:grid-cols-5 justify-items-center">
+          {#each buttons.variant as variant}
+            {#if size === 'icon'}
+              <Button {variant} {size}><Icon name="arrow-right"></Icon></Button>
+            {:else}
+              <Button {variant} {size}>{variant.charAt(0).toUpperCase() + variant.slice(1)} Button</Button>
+            {/if}
+          {/each}
+      </div>
+      {/each}
+     </div> 
   </section>
   </div>
 </div>

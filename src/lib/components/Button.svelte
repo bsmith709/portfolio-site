@@ -32,8 +32,8 @@
 
   // Base classes applied to all buttons for a consistent foundation.
   const baseClasses = `
-    inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-serif
-    transition-background-position transform-transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+    inline-flex items-center justify-center whitespace-nowrap rounded-md font-serif
+    transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
     disabled:pointer-events-none disabled:opacity-50 hover:scale-102 active:scale-95
   `;
 
@@ -41,17 +41,17 @@
   const variantClasses: Record<Variant, string> = {
     primary: 'text-main-900 bg-gradient-main bg-[length:100%_300%] bg-no-repeat bg-center active:bg-bottom hover:bg-top',
     secondary: 'text-secondary-900 bg-gradient-secondary bg-[length:100%_300%] bg-no-repeat bg-center active:bg-bottom hover:bg-top',
-    outline: 'border border-neutral-300 text-neutral-300 bg-transparent hover:bg-neutral-300 hover:border-neutral-300 hover:text-neutral-900 active:bg-neutral-400 active:border-neutral-400 active:text-neutral-900',
-    ghost: 'text-neutral-400 hover:bg-neutral-600 hover:text-neutral-100 active:bg-neutral-700 active:text-neutral-400',
-    link: 'text-neutral-100 underline-offset-4 hover:underline',
+    outline: 'border border-neutral-400 text-neutral-400 bg-transparent hover:bg-neutral-400 hover:border-neutral-400 hover:text-neutral-900 active:bg-neutral-500 active:border-neutral-500 active:text-neutral-900',
+    ghost: 'text-neutral-400 hover:bg-neutral-700 hover:text-neutral-100 active:bg-neutral-800 active:text-neutral-500',
+    link: 'text-neutral-100 underline-offset-4 hover:text-main-300 hover:underline',
   };
 
   // Classes for different button sizes.
   const sizeClasses: Record<Size, string> = {
-    sm: 'h-7 rounded-md px-3',
-    md: 'h-9 rounded-md px-4',
-    lg: 'h-11 rounded-md px-8',
-    icon: 'h-10 w-10',
+    sm: 'h-6 rounded-md px-3 text-xs',
+    md: 'h-7 rounded-md px-5 text-base',
+    lg: 'h-8 rounded-md px-6 text-lg',
+    icon: 'h-5 w-5',
   };
 
   // Reactive statement to compute the final class string.
