@@ -265,7 +265,7 @@
     <!-- Spacing Scale -->
     <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Spacing Scale</h2>
-      <div class="grid grid-cols-[auto_1fr] gap-2 space-y-6">
+      <div class="overflow-x-auto grid grid-cols-[auto_1fr] gap-2 space-y-6">
         {#each spacingScale as space}
           <p class="font-semibold text-neutral-100">{space.name}: </p>
           <div class="bg-neutral-500 h-5 {space.class}"></div>
@@ -276,11 +276,11 @@
     <!-- Border Widths -->
     <section class="mb-7">
       <h2 class="text-2xl font-semibold text-main-100 mb-4">Border Widths</h2>
-      <div class="grid grid-cols-4 gap-6 sm:gap-8 lg:gap-8">
+      <div class="grid grid-cols-4 gap-6 sm:gap-7 lg:gap-8">
         {#each borderWidths as border}
           <div class="text-center">
             <p class="font-semibold text-neutral-100 mb-2">{border.name}</p>
-            <div class="bg-neutral-700 border-neutral-500 aspect-square border {border.class}"></div>
+            <div class="bg-neutral-700 border-neutral-500 w-full h-full border {border.class}"></div>
           </div>
         {/each}
       </div>
@@ -298,10 +298,10 @@
 
     <!-- Gradients -->
     <section class="mb-7">
-      <div class="grid grid-cols-2 gap-10">
+      <div class="grid grid-cols-2 gap-6 sm:gap-7 lg:gap-8">
         {#each gradients as gradient}
           <div class="text-center">
-            <p class="font-semibold text-gradient-secondary mb-4">{gradient.name}</p>
+            <p class="font-semibold text-xl text-gradient-secondary mb-4">{gradient.name}</p>
             <div class="h-10 {gradient.class} rounded-lg"></div>
           </div>
         {/each}
