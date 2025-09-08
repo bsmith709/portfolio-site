@@ -4,6 +4,7 @@
   import Button from '$lib/components/Button.svelte';
   import Icon from '$lib/components/Icon.svelte';
   import Card from '$lib/components/Card.svelte';
+  import melBandsImage from '$lib/assets/256MelBands.png';
 
   const palettes = [
     {
@@ -35,7 +36,7 @@
       ]
     },
     {
-      name: 'Semantic Colors',
+      name: 'Semantic Success',
       colors: [
         { name: 'Success-100', class: 'bg-semantic-green-100' },
         { name: 'Success-200', class: 'bg-semantic-green-200' },
@@ -46,7 +47,11 @@
         { name: 'Success-700', class: 'bg-semantic-green-700' },
         { name: 'Success-800', class: 'bg-semantic-green-800' },
         { name: 'Success-900', class: 'bg-semantic-green-900' },
-
+      ]
+    },
+    {
+      name: 'Semantic Warning',
+      colors: [
         { name: 'Warning-100', class: 'bg-semantic-yellow-100' },
         { name: 'Warning-200', class: 'bg-semantic-yellow-200' },
         { name: 'Warning-300', class: 'bg-semantic-yellow-300' },
@@ -56,7 +61,11 @@
         { name: 'Warning-700', class: 'bg-semantic-yellow-700' },
         { name: 'Warning-800', class: 'bg-semantic-yellow-800' },
         { name: 'Warning-900', class: 'bg-semantic-yellow-900' },
-
+      ]
+    },
+    {
+      name: 'Semantic Error',
+      colors: [
         { name: 'Error-100', class: 'bg-semantic-red-100' },
         { name: 'Error-200', class: 'bg-semantic-red-200' },
         { name: 'Error-300', class: 'bg-semantic-red-300' },
@@ -152,8 +161,8 @@
   ];
 
   const gradients = [
-    { name: 'Main Gradient', class: 'bg-gradient-main' },
-    { name: 'Secondary Gradient', class: 'bg-gradient-secondary' }
+    { name: 'Main', class: 'bg-gradient-main' },
+    { name: 'Secondary', class: 'bg-gradient-secondary' }
   ];
 
   const buttons = {
@@ -163,39 +172,39 @@
 
 </script>
 
-<main class="min-h-screen w-full max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
+<main class="min-h-screen w-full max-w-7xl mx-auto p-6 sm:p-5 lg:p-6">
 
   <!-- Main header -->
   <header class="text-center">
-    <h1 class="text-6xl sm:text-7xl font-extrabold tracking-wide mt-6 mb-10">
+    <h1 class="text-2xl sm:text-5xl font-extrabold tracking-wide mb-6 sm:mt-6 sm:mb-10">
       Portfolio Design System
     </h1>
   </header>
 
   <!-- Color Palettes Section -->
-  <section class="mb-10">
+  <section class="mb-6 sm:mb-10">
     <!-- Section header -->
-    <h2 class="text-4xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Color Palettes</h2>
+    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Color Palettes</h2>
 
     <!-- Color Palettes -->
      {#each palettes as palette}
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">{palette.name}</h3>
-      <div class="grid grid-cols-9 gap-3 sm:gap-4 mb-4">
+      <h3 class="text-lg font-semibold text-main-100 mb-4">{palette.name}</h3>
+      <div class="grid grid-cols-5 sm:grid-cols-9 gap-3 sm:gap-4 mb-4">
         {#each palette.colors as color}
-          <button class="relative group" aria-label={color.name} tabindex="0">
+            <button class="relative group" aria-label={color.name} tabindex="0">
 
-            <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-neutral-100 text-base font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
-              {color.name}
-            </span>
+              <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-neutral-100 text-base font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
+                {color.name}
+              </span>
 
-            <!-- The main color splotch -->
-            <div 
-              class="aspect-square shadow-lg rounded-xl transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-xl group-focus:scale-110 group-focus:shadow-xl {color.class}"
-            ></div>
-            
-            <!-- A subtle border effect on hover/focus -->
-            <div class="absolute rounded-xl inset-0 border-4 border-transparent group-hover:border-white/50 group-focus:border-white/50 transition-all duration-300"></div>
-          </button>
+              <!-- The main color splotch -->
+              <div 
+                class="aspect-square shadow-lg rounded-xl transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-xl group-focus:scale-110 group-focus:shadow-xl {color.class}"
+              ></div>
+              
+              <!-- A subtle border effect on hover/focus -->
+              <div class="absolute rounded-xl inset-0 border-4 border-transparent group-hover:border-white/50 group-focus:border-white/50 transition-all duration-300"></div>
+            </button>
         {/each}
       </div>
     {/each}
@@ -203,14 +212,14 @@
 
 
   <!-- Typography Section -->
-  <section class="mb-10">
+  <section class="mb-6 sm:mb-10">
 
     <!-- Section header -->
-    <h2 class="text-4xl sm:text-5xl font-bold text-center text-gradient-main mb-4"> Typography</h2>
+    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4"> Typography</h2>
 
     <!-- Font Scale -->
     <div class="mb-7">
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">Font Scale</h3>
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Font Scale</h3>
       <div class="space-y-6 text-center">
         {#each fontScale as font}
           <div class="{font.class} text-neutral-100">
@@ -222,10 +231,10 @@
 
     <!-- Font Weights -->
     <div class="mb-7">
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">Font Weights</h3>
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Font Weights</h3>
       <div class="space-y-6 text-center">
         {#each fontStyles as style}
-          <div class="grid grid-cols-2 gap-7 {style.class} text-neutral-100 text-xl">
+          <div class="grid grid-cols-2 gap-7 {style.class} text-neutral-100">
               <p>{style.name} - The quick brown fox jumps over the lazy dog.</p> <p class="italic">{style.name} Italic - The quick brown fox jumps over the lazy dog.</p>
           </div>
         {/each}
@@ -234,10 +243,10 @@
 
     <!-- Line Heights -->
     <div class="mb-7">
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">Line Heights</h3>
-      <div class="grid grid-cols-5 gap-6 text-center items-start">
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Line Heights</h3>
+      <div class="grid grid-cols-2 gap-4 text-center items-start">
         {#each lineHeights as line}
-          <div class="text-neutral-100 text-lg max-w-2xl mx-auto">
+          <div class="text-neutral-100">
               <p class="font-extrabold text-gradient-secondary">{line.name}</p> <p class="{line.class}">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
           </div>
         {/each}
@@ -246,10 +255,10 @@
 
     <!-- Letter Spacing -->
     <div class="mb-7">
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">Letter Spacing</h3>
-      <div class="grid grid-cols-5 space-y-6 text-center">
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Letter Spacing</h3>
+      <div class="grid grid-cols-2 gap-4 text-center">
         {#each letterSpacing as letter}
-          <div class="{letter.class} text-neutral-100 text-lg max-w-2xl mx-auto">
+          <div class="{letter.class} text-neutral-100">
               <p class="font-extrabold text-gradient-secondary">{letter.name}</p> <p>The quick brown fox jumps over the lazy dog.</p>
           </div>
         {/each}
@@ -257,12 +266,12 @@
     </div>
   </section> 
 
-  <section class="mb-10">
-    <h2 class="text-4xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Spacing and Borders</h2>
+  <section class="mb-6 sm:mb-10">
+    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Spacing and Borders</h2>
 
     <!-- Spacing Scale -->
     <div class="mb-7">
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">Spacing Scale</h3>
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Spacing Scale</h3>
       <div class="overflow-x-auto grid grid-cols-[auto_1fr] gap-6">
         {#each spacingScale as space}
           <p class="font-semibold text-neutral-100">{space.name}: </p>
@@ -273,29 +282,29 @@
 
     <!-- Border Widths -->
     <div class="mb-7">
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">Border Widths</h3>
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Border Widths</h3>
       <div class="grid grid-cols-4 gap-6 sm:gap-7 lg:gap-8">
         {#each borderWidths as border}
           <div class="text-center">
             <p class="font-semibold text-neutral-100 mb-2">{border.name}</p>
-            <div class="bg-neutral-700 border-neutral-500 w-full h-full border {border.class}"></div>
+            <div class="bg-neutral-700 border-neutral-500 w-full aspect-square border {border.class}"></div>
           </div>
         {/each}
       </div>
     </div>
   </section>
 
-  <section class="mb-10">
+  <section class="mb-6 sm:mb-10">
 
     <!-- Section header -->
-    <h2 class="text-4xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Gradients</h2>
+    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Gradients</h2>
 
     <!-- Gradients -->
     <div class="mb-7">
       <div class="grid grid-cols-2 gap-6 sm:gap-7 lg:gap-8">
         {#each gradients as gradient}
           <div class="text-center">
-            <p class="font-semibold text-xl text-gradient-secondary mb-4">{gradient.name}</p>
+            <p class="font-semibold text-gradient-secondary mb-4">{gradient.name}</p>
             <div class="h-10 {gradient.class} rounded-lg"></div>
           </div>
         {/each}
@@ -303,15 +312,15 @@
     </div>
   </section>
 
-  <section class="mb-10">
-    <h2 class="text-4xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Components</h2>
+  <section class="mb-6 sm:mb-10">
+    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Components</h2>
 
     <div class="mb-7">
-      <h3 class="text-2xl font-semibold text-main-100 mb-4">Buttons</h3>
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Buttons</h3>
       <div class="grid grid-cols-[auto_1fr] gap-6 items-center">
         {#each buttons.size as size}
         <p class="font-semibold text-gradient-secondary">{size}:</p>
-        <div class="grid grid-cols-3 gap-x-8 gap-y-4 lg:grid-cols-5 justify-items-center">
+        <div class="flex flex-wrap items-center gap-4">
             {#each buttons.variant as variant}
               {#if size === 'icon'}
                 <Button {variant} {size}><Icon name="arrow-right"></Icon></Button>
@@ -323,34 +332,34 @@
         {/each}
       </div> 
     </div>
-  </section>
+  
+    <div class="mb-7">
+      <h3 class="text-lg font-semibold text-main-100 mb-4">Cards</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card 
+          image={melBandsImage}
+          title="Card Title" 
+          description="This is a description for the card component. It provides additional context about the card's content." 
+          tags={['Tag1', 'Tag2', 'Tag3']}
+        >
+          <p>This is the main content area of the card. You can put any Svelte content here, including text, images, or other components.</p>
+        </Card>
 
-  <section class="mb-10">
-    <h2 class="text-4xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Cards</h2>
+        <Card 
+          title="Another Card" 
+          description="Cards can have different titles and descriptions to suit various content needs." 
+          tags={['Example', 'Svelte', 'Component']}
+        >
+          <p>Cards are versatile components that can be used to display grouped information in a visually appealing way.</p>
+        </Card>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <Card 
-        title="Card Title" 
-        description="This is a description for the card component. It provides additional context about the card's content." 
-        tags={['Tag1', 'Tag2', 'Tag3']}
-      >
-        <p>This is the main content area of the card. You can put any Svelte content here, including text, images, or other components.</p>
-      </Card>
-
-      <Card 
-        title="Another Card" 
-        description="Cards can have different titles and descriptions to suit various content needs." 
-        tags={['Example', 'Svelte', 'Component']}
-      >
-        <p>Cards are versatile components that can be used to display grouped information in a visually appealing way.</p>
-      </Card>
-
-      <Card 
-        title="Card Without Tags" 
-        description="This card does not have any tags, demonstrating the optional nature of the tags prop."
-      >
-        <p>Even without tags, cards maintain their structure and style, making them flexible for different use cases.</p>
-      </Card>
+        <Card 
+          title="Card Without Tags" 
+          description="This card does not have any tags, demonstrating the optional nature of the tags prop."
+        >
+          <p>Even without tags, cards maintain their structure and style, making them flexible for different use cases.</p>
+        </Card>
+      </div>
     </div>
   </section>
 </main>

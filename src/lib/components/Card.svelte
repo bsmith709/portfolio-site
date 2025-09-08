@@ -1,6 +1,7 @@
 <script lang="ts">
     const {
         class: extraClasses = '', // Rename `class` prop to avoid conflict with the HTML attribute
+        image='', // Optional image URL for the card
         title = '', // Optional title for the card
         description = '', // Optional description for the card
         tags = [] as string[], // Optional tags for the card
@@ -20,6 +21,9 @@
 <div
     class={`bg-neutral-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-200 ${extraClasses}`}
     {...restProps}>
+    {#if image}
+        <img src="{image}" alt="{title}" class="w-full h-48 object-cover rounded mb-4" />
+    {/if}
     {#if title}
         <h3 class="text-2xl font-semibold text-main-100 mb-2">{title}</h3>
     {/if}
