@@ -3,6 +3,7 @@
   // Using the full class name ensures Tailwind's JIT compiler will include them in the final CSS.
   import Button from '$lib/components/Button.svelte';
   import Icon from '$lib/components/Icon.svelte';
+  import Card from '$lib/components/Card.svelte';
 
   const palettes = [
     {
@@ -321,6 +322,35 @@
         </div>
         {/each}
       </div> 
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-4xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Cards</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Card 
+        title="Card Title" 
+        description="This is a description for the card component. It provides additional context about the card's content." 
+        tags={['Tag1', 'Tag2', 'Tag3']}
+      >
+        <p>This is the main content area of the card. You can put any Svelte content here, including text, images, or other components.</p>
+      </Card>
+
+      <Card 
+        title="Another Card" 
+        description="Cards can have different titles and descriptions to suit various content needs." 
+        tags={['Example', 'Svelte', 'Component']}
+      >
+        <p>Cards are versatile components that can be used to display grouped information in a visually appealing way.</p>
+      </Card>
+
+      <Card 
+        title="Card Without Tags" 
+        description="This card does not have any tags, demonstrating the optional nature of the tags prop."
+      >
+        <p>Even without tags, cards maintain their structure and style, making them flexible for different use cases.</p>
+      </Card>
     </div>
   </section>
 </main>
