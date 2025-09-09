@@ -1,9 +1,9 @@
-@import './fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/container-queries';
 
-:root { --font-family-serif: 'Spectral', serif; }
 
 @theme {
   --color-main-900: hsl(35 65% 20%);
@@ -66,8 +66,7 @@
   --color-neutral-200: hsl(220 43% 73%);
   --color-neutral-100: hsl(220 48% 90%);
 
-  --font-family-sans: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-  --font-family-serif: 'Spectral', serif;
+  --font-spectral: 'Spectral', serif;
 
   --font-size-xs: 12px;
   --font-size-sm: 14px;

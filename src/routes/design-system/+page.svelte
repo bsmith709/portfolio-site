@@ -167,7 +167,7 @@
 
   const buttons = {
     variant: ['primary', 'secondary', 'outline', 'ghost', 'link'],
-    size: ['sm', 'md', 'lg', 'icon']
+    size: ['icon', 'sm', 'md', 'lg']
   }
 
 </script>
@@ -176,7 +176,7 @@
 
   <!-- Main header -->
   <header class="text-center">
-    <h1 class="text-2xl sm:text-5xl font-extrabold tracking-wide mb-6 sm:mt-6 sm:mb-10">
+    <h1 class="text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-wide mb-6 sm:mt-6 sm:mb-8">
       Portfolio Design System
     </h1>
   </header>
@@ -184,16 +184,16 @@
   <!-- Color Palettes Section -->
   <section class="mb-6 sm:mb-10">
     <!-- Section header -->
-    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Color Palettes</h2>
+    <h2 class="text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-gradient-main mb-4">Color Palettes</h2>
 
     <!-- Color Palettes -->
      {#each palettes as palette}
-      <h3 class="text-lg font-semibold text-main-100 mb-4">{palette.name}</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">{palette.name}</h3>
       <div class="grid grid-cols-5 sm:grid-cols-9 gap-3 sm:gap-4 mb-4">
         {#each palette.colors as color}
             <button class="relative group" aria-label={color.name} tabindex="0">
 
-              <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-neutral-100 text-base font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
+              <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-neutral-900 text-neutral-100 text-xs sm:text-sm md:text-base font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none">
                 {color.name}
               </span>
 
@@ -215,11 +215,11 @@
   <section class="mb-6 sm:mb-10">
 
     <!-- Section header -->
-    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4"> Typography</h2>
+    <h2 class="text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-gradient-main mb-4"> Typography</h2>
 
     <!-- Font Scale -->
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Font Scale</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Font Scale</h3>
       <div class="space-y-6 text-center">
         {#each fontScale as font}
           <div class="{font.class} text-neutral-100">
@@ -231,7 +231,7 @@
 
     <!-- Font Weights -->
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Font Weights</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Font Weights</h3>
       <div class="space-y-6 text-center">
         {#each fontStyles as style}
           <div class="grid grid-cols-2 gap-7 {style.class} text-neutral-100">
@@ -243,7 +243,7 @@
 
     <!-- Line Heights -->
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Line Heights</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Line Heights</h3>
       <div class="grid grid-cols-2 gap-4 text-center items-start">
         {#each lineHeights as line}
           <div class="text-neutral-100">
@@ -255,7 +255,7 @@
 
     <!-- Letter Spacing -->
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Letter Spacing</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Letter Spacing</h3>
       <div class="grid grid-cols-2 gap-4 text-center">
         {#each letterSpacing as letter}
           <div class="{letter.class} text-neutral-100">
@@ -267,11 +267,11 @@
   </section> 
 
   <section class="mb-6 sm:mb-10">
-    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Spacing and Borders</h2>
+    <h2 class="text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-gradient-main mb-4">Spacing and Borders</h2>
 
     <!-- Spacing Scale -->
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Spacing Scale</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Spacing Scale</h3>
       <div class="overflow-x-auto grid grid-cols-[auto_1fr] gap-6">
         {#each spacingScale as space}
           <p class="font-semibold text-neutral-100">{space.name}: </p>
@@ -282,7 +282,7 @@
 
     <!-- Border Widths -->
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Border Widths</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Border Widths</h3>
       <div class="grid grid-cols-4 gap-6 sm:gap-7 lg:gap-8">
         {#each borderWidths as border}
           <div class="text-center">
@@ -297,7 +297,7 @@
   <section class="mb-6 sm:mb-10">
 
     <!-- Section header -->
-    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Gradients</h2>
+    <h2 class="text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-gradient-main mb-4">Gradients</h2>
 
     <!-- Gradients -->
     <div class="mb-7">
@@ -313,19 +313,26 @@
   </section>
 
   <section class="mb-6 sm:mb-10">
-    <h2 class="text-xl sm:text-5xl font-bold text-center text-gradient-main mb-4">Components</h2>
+    <h2 class="text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-gradient-main mb-4">Components</h2>
 
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Buttons</h3>
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Buttons</h3>
       <div class="grid grid-cols-[auto_1fr] gap-6 items-center">
         {#each buttons.size as size}
         <p class="font-semibold text-gradient-secondary">{size}:</p>
         <div class="flex flex-wrap items-center gap-4">
             {#each buttons.variant as variant}
               {#if size === 'icon'}
-                <Button {variant} {size}><Icon name="arrow-right"></Icon></Button>
+                <Button {variant} {size}><div class="w-full h-full shrink-0"><Icon name="arrow-right" /></div></Button>
               {:else}
-                <Button {variant} {size}>{variant.charAt(0).toUpperCase() + variant.slice(1)} Button</Button>
+                {#if size === 'sm'}
+                  <Button {variant} {size}><span>{variant.charAt(0).toUpperCase() + variant.slice(1)} Button</span><Icon name="arrow-right" class="h-3 w-3"></Icon></Button>
+                {:else if size === 'md'}
+                  <Button {variant} {size}><span>{variant.charAt(0).toUpperCase() + variant.slice(1)} Button</span><Icon name="arrow-right" class="h-4 w-4"></Icon></Button>
+                {:else if size === 'lg'}
+                  <Button {variant} {size}><span>{variant.charAt(0).toUpperCase() + variant.slice(1)} Button</span><Icon name="arrow-right" class="h-5 w-5"></Icon></Button>
+                {/if}
+
               {/if}
             {/each}
         </div>
@@ -334,15 +341,20 @@
     </div>
   
     <div class="mb-7">
-      <h3 class="text-lg font-semibold text-main-100 mb-4">Cards</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Cards</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card 
           image={melBandsImage}
           title="Card Title" 
           description="This is a description for the card component. It provides additional context about the card's content." 
           tags={['Tag1', 'Tag2', 'Tag3']}
         >
-          <p>This is the main content area of the card. You can put any Svelte content here, including text, images, or other components.</p>
+          {#snippet actions()}
+            <Button variant="link" size="md">
+              Learn More
+              <Icon name="link" class="h-4 w-4" />
+            </Button>
+          {/snippet}
         </Card>
 
         <Card 
