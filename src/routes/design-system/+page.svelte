@@ -350,7 +350,7 @@
           tags={['Tag1', 'Tag2', 'Tag3']}
         >
           {#snippet actions()}
-            <Button variant="link" size="md">
+            <Button variant="link" size="md" class="h-full">
               Learn More
               <Icon name="link" class="h-4 w-4" />
             </Button>
