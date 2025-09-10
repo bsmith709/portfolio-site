@@ -342,7 +342,7 @@
   
     <div class="mb-7">
       <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Cards</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
         <Card 
           image={melBandsImage}
           title="Card Title" 
@@ -350,28 +350,49 @@
           tags={['Tag1', 'Tag2', 'Tag3']}
         >
           {#snippet actions()}
-            <Button variant="link" size="md" class="h-full">
+            <Button 
+              variant="link" 
+              class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
+            >
               Learn More
-              <Icon name="link" class="h-4 w-4" />
+              <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
             </Button>
           {/snippet}
         </Card>
 
         <Card 
-          title="Another Card" 
-          description="Cards can have different titles and descriptions to suit various content needs." 
-          tags={['Example', 'Svelte', 'Component']}
+          image={melBandsImage}
+          title="Card Title" 
+          description="This is a description for the card component. It provides additional context about the card's content." 
+          tags={['Tag1', 'Tag2', 'Tag3']}
         >
-          <p>Cards are versatile components that can be used to display grouped information in a visually appealing way.</p>
-        </Card>
-
-        <Card 
-          title="Card Without Tags" 
-          description="This card does not have any tags, demonstrating the optional nature of the tags prop."
-        >
-          <p>Even without tags, cards maintain their structure and style, making them flexible for different use cases.</p>
+          {#snippet actions()}
+            <Button 
+              variant="link" 
+              class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
+            >
+              Learn More
+              <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
+            </Button>
+          {/snippet}
         </Card>
       </div>
+      <Card 
+        image={melBandsImage}
+        title="Card Title" 
+        description="This is a description for the card component. It provides additional context about the card's content." 
+        tags={['Tag1', 'Tag2', 'Tag3']}
+      >
+        {#snippet actions()}
+          <Button 
+            variant="link" 
+            class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
+          >
+            Learn More
+            <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
+          </Button>
+        {/snippet}
+      </Card>
     </div>
   </section>
 </main>

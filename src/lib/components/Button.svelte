@@ -6,13 +6,13 @@
 
   // Define the types for the component's props for strong type safety.
   type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
-  type Size = 'sm' | 'md' | 'lg' | 'icon';
+  type Size = 'sm' | 'md' | 'lg' | 'icon' | 'custom'
   type ButtonType = 'button' | 'submit' | 'reset';
 
   // Use Svelte 5's $props() rune for declaring component properties.
   const {
     variant = 'primary' as Variant,
-    size = 'md' as Size,
+    size = 'custom' as Size,
     type = 'button' as ButtonType,
     disabled = false,
     class: extraClasses = '', // Rename `class` prop to avoid conflict with the HTML attribute
@@ -52,6 +52,7 @@
     md: 'h-7 rounded-md px-4 text-base gap-2',
     lg: 'h-8 rounded-md px-5 text-lg gap-3',
     icon: 'h-5 w-5 p-1',
+    custom: '', // No predefined classes; user must provide their own via `class` prop
   };
 
   // Reactive statement to compute the final class string.
