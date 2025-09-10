@@ -3,15 +3,16 @@
     import Button from '$lib/components/Button.svelte';
     import Card from '$lib/components/Card.svelte';
     import Hero from '$lib/components/Hero.svelte';
+    import About from '$lib/components/About.svelte';
 </script>
 
 <main class="min-h-screen w-full max-w-7xl mx-auto px-5 py-6 sm:p-5 lg:p-6">
-    <section id="hero" class="mb-16 p">
+    <section id="hero" class="mb-10">
         <Hero />
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
+    <section id="about" class="mb-8">
+        <About />
     </section>
 
     <section id="projects">
