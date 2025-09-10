@@ -1,5 +1,5 @@
 <script lang="ts">
-    type IconName = 'arrow-down-tray' | 'arrow-right' | 'github' | 'link' | null;
+    type IconName = 'arrow-down-tray' | 'arrow-right' | 'github' | 'link' | 'handshake' | 'arrow-up-right' | null;
 
     const {
         name = null as IconName,
@@ -46,7 +46,22 @@
                 paths: '<path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />',
                 strokeWidth: '1.5',
             }
-        ]
+        ],
+        [
+            'handshake',
+            {
+                paths: '<g transform="translate(0 225) scale(0.1 -0.1)"><path fill-rule="evenodd" d="M0 2250 H2250 V0 H0 Z M870 1791 c0 -4 -52 -300 -115 -656 -63 -357 -115 -656 -115 -667 0 -16 10 -18 124 -18 110 0 125 2 130 18 2 9 17 89 31 177 15 88 32 168 39 177 6 9 66 62 134 117 85 71 122 96 122 84 0 -16 -80 -470 -96 -546 l-6 -27 130 0 130 0 12 68 c6 37 59 340 119 675 l107 607 -127 0 -128 0 -10 -52 c-6 -29 -27 -145 -47 -258 -19 -112 -37 -206 -38 -208 -13 -13 -261 -210 -263 -209 -2 2 111 643 123 700 l6 27 -131 0 c-72 0 -131 -4 -131 -9z"/></g>',
+                viewBox: '0 0 225 225',
+                fill: 'currentColor',
+                stroke: 'none'
+            }
+        ],
+        [
+            'arrow-up-right',
+            {
+                paths: '<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />',
+            }
+        ],
     ]);
 
     // Reactive statement to get the correct SVG path data.

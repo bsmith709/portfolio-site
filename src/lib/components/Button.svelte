@@ -33,7 +33,7 @@
   // Base classes applied to all buttons for a consistent foundation.
   const baseClasses = `
     inline-flex items-center justify-center gap-1 whitespace-nowrap rounded-md font-serif
-    transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+    transform transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
     disabled:pointer-events-none disabled:opacity-50 hover:scale-102 active:scale-95
   `;
 

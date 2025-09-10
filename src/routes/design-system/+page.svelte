@@ -172,7 +172,7 @@
 
 </script>
 
-<main class="min-h-screen w-full max-w-7xl mx-auto p-6 sm:p-5 lg:p-6">
+<main class="min-h-screen w-full max-w-7xl mx-auto p-4 sm:p-5 lg:p-6">
 
   <!-- Main header -->
   <header class="text-center">
@@ -272,7 +272,7 @@
     <!-- Spacing Scale -->
     <div class="mb-7">
       <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Spacing Scale</h3>
-      <div class="overflow-x-auto grid grid-cols-[auto_1fr] gap-6">
+      <div class="overflow-x-auto overflow-y-hidden grid grid-cols-[auto_1fr] gap-6">
         {#each spacingScale as space}
           <p class="font-semibold text-neutral-100">{space.name}: </p>
           <div class="bg-neutral-500 h-5 {space.class}"></div>
