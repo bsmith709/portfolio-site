@@ -4,8 +4,8 @@
 </script>
 
 <header>
-	<h1 class="text-gradient-main text-5xl font-bold">Blake Smith</h1>
-	<h2 class="text-2xl text-gradient-secondary -mt-1 font-semibold">Software Engineer</h2>
+	<h1 class="text-gradient-main text-5xl font-bold inline">Blake Smith</h1>
+	<h2 class="text-2xl text-gradient-secondary mt-1 font-semibold">Software Engineer</h2>
     <h3 class="text-lg text-neutral-100 -mt-2">Machine Learning | Embedded Systems | Full Stack</h3>
 </header>
 
