@@ -1,6 +1,6 @@
 # **Blake Smith's Personal Portfolio**
 
-![Portfolio Screenshot](https://raw.githubusercontent.com/bsmith709/blakesmith.dev/main/static/Portfolio-Screenshot.png)
+![Portfolio Screenshot](https://raw.githubusercontent.com/bsmith709/portfolio-site/main/static/Portfolio-Screenshot.png)
 
 This is the source code for my personal portfolio website, built to showcase my projects, skills, and professional experience as a software engineer specializing in Machine Learning, Embedded Systems, and Full Stack Development.  
 The site is designed with a "simple, elegant, and maintainable" philosophy, featuring a clean, responsive layout that works seamlessly across all devices. It also includes a self-documented design system.  
