@@ -1,38 +1,52 @@
-# sv
+# **Blake Smith's Personal Portfolio**
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+![Portfolio Screenshot](https://raw.githubusercontent.com/bsmith709/blakesmith.dev/main/static/Portfolio-Screenshot.png)
 
-## Creating a project
+This is the source code for my personal portfolio website, built to showcase my projects, skills, and professional experience as a software engineer specializing in Machine Learning, Embedded Systems, and Full Stack Development.  
+The site is designed with a "simple, elegant, and maintainable" philosophy, featuring a clean, responsive layout that works seamlessly across all devices. It also includes a self-documented design system.  
+**Live Site:** [blakesmithdev.com](https://www.google.com/search?q=https://blakesmithdev.com)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## **✨ Features**
 
-```sh
-# create a new project in the current directory
-npx sv create
+* **Fully Responsive:** Adapts from mobile to desktop screens with a two-column layout on larger viewports.  
+* **Component-Driven:** Built with a modular architecture using reusable Svelte components.  
+* **Sticky Navigation:** On desktop, key information remains visible while project details scroll.  
+* **Integrated Design System:** A /design-system page that documents the site's visual language, from colors to components.  
+* **Optimized for SEO & Accessibility:** Includes meta tags for search engines and ARIA labels for screen readers.
 
-# create a new project in my-app
-npx sv create my-app
-```
+## **🛠️ Built With**
 
-## Developing
+This project was built from scratch using the following technologies:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+* **Framework:** [SvelteKit](https://kit.svelte.dev/)  
+* **Language:** [TypeScript](https://www.typescriptlang.org/)  
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) with JIT compilation  
+* **Deployment:** [Vercel](https://vercel.com/)
 
-```sh
-npm run dev
+## **🚀 Getting Started**
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+To get a local copy up and running, follow these simple steps.
 
-## Building
+### **Prerequisites**
 
-To create a production version of your app:
+You will need [Node.js](https://nodejs.org/) (version 18.x or later) and npm installed on your machine.
 
-```sh
-npm run build
-```
+### **Installation & Running**
 
-You can preview the production build with `npm run preview`.
+1. **Clone the repository:**  
+   git clone \[https://github.com/your-username/your-repo-name.git\](https://github.com/your-username/your-repo-name.git)
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+2. **Navigate to the project directory:**  
+   cd your-repo-name
+
+3. **Install NPM packages:**  
+   npm install
+
+4. **Run the development server:**  
+   npm run dev
+
+Open [http://localhost:5173](https://www.google.com/search?q=http://localhost:5173) with your browser to see the result.
+
+## **📄 License**
+
+This project is licensed under the MIT License \- see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
