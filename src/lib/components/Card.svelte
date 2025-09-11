@@ -34,7 +34,7 @@
             <div class="flex flex-col flex-grow">
                 <div class="flex justify-between items-baseline mb-1">
                     {#if title}
-                        <h3 class="text-lg @xl:text-xl @4xl:text-2xl font-semibold text-gradient-main pb-0!">{title}</h3>
+                        <h3 class="text-lg @xl:text-xl @4xl:text-2xl font-semibold text-gradient-main mr-2 pb-0!">{title}</h3>
                     {/if}
                     
                     {#if actions}

@@ -5,7 +5,7 @@
    */
 
   // Define the types for the component's props for strong type safety.
-  type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
+  type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link' | string;
   type Size = 'sm' | 'md' | 'lg' | 'icon' | 'custom'
   type ButtonType = 'button' | 'submit' | 'reset';
 
