@@ -4,6 +4,7 @@
     import Button from '$lib/components/Button.svelte';
     import melBandsImage from '$lib/assets/256MelBands.png';
     import evoSimImage from '$lib/assets/EvoSim.png';
+    import portfolioImage from '$lib/assets/Portfolio.png';
 </script>
 
 <header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 sm:text-lg">
@@ -46,7 +47,7 @@
     </Card>
 
     <Card 
-        image={evoSimImage}
+        image={portfolioImage}
         title="Personal Portfolio & Design System" 
         description="A fully responsive personal portfolio built from scratch with SvelteKit, TypeScript, and Tailwind CSS. It features a modular, component-based architecture and includes a self-documented design system for consistent maintainable expansion." 
         tags={['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Component Design']}

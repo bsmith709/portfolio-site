@@ -48,7 +48,7 @@
 
   // Classes for different button sizes.
   const sizeClasses: Record<Size, string> = {
-    sm: 'h-6 rounded-md px-3 text-xs lg:text-sm',
+    sm: 'h-6 rounded-md px-3 text-xs',
     md: 'h-7 rounded-md px-4 text-base gap-2',
     lg: 'h-8 rounded-md px-5 text-lg gap-3',
     icon: 'h-5 w-5 p-1',

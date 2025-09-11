@@ -6,13 +6,12 @@
 	import Skills from '$lib/components/Skills.svelte';
     import Contact from '$lib/components/Contact.svelte';
 </script>
-<div class="w-full max-w-7xl mx-auto lg:grid lg:grid-cols-2 lg:gap-10">
-    <main class="min-h-screen w-full max-w-7xl mx-auto px-5 py-6 sm:p-5 lg:p-6">
-        <section id="hero" class="mb-9">
-            <Hero />
-        </section>
-
-        <section id="about" class="mb-8">
+<div class="min-h-screen w-full max-w-7xl mx-auto px-5 py-7 lg:grid lg:grid-cols-2 lg:gap-8 lg:py-0 lg:px-7 xl:gap-11">
+    <header id="hero" class="mb-9 lg:mb-0 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-full lg:flex-col lg:justify-between lg:py-9">
+        <Hero />
+    </header>
+    <main>
+        <section id="about" class="mb-8 lg:mt-4 xl:mt-6">
             <About />
         </section>
 
