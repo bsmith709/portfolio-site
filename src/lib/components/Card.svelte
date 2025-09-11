@@ -19,7 +19,7 @@
     }>();
 </script>
 
-<div class={`@container rounded-xl shadow-md flex flex-col overflow-hidden group ${extraClasses}`} {...restProps}>
+<div class={`@container @lg:rounded-xl shadow-md flex flex-col overflow-hidden group ${extraClasses}`} {...restProps}>
     <div class="flex-grow @lg:hover:bg-neutral-800 @lg:p-4">
         <div class="flex flex-col-reverse @2xl:flex-row @2xl:items-start">
             {#if image}

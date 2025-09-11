@@ -6,11 +6,11 @@
     import evoSimImage from '$lib/assets/EvoSim.png';
 </script>
 
-<header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75">
+<header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 sm:text-lg">
     <h4 class="text-main-100 font-semibold uppercase tracking-wide">Projects</h4>
 </header>
 
-<div class="grid grid-cols-1 gap-6">
+<div class="grid grid-cols-1 gap-y-6">
     <Card 
         image={melBandsImage}
         title="Machine Learning on Edge Devices" 
