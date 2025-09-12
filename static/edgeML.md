@@ -15,7 +15,7 @@ The first practical step was to establish a data pipeline for a proof-of-concept
 
 ##### Initial CNN Model Development  
 Using TensorFlow/Keras, I built and trained a CNN (TF\_CNN.py) to classify the 8 keywords. After testing the different feature types, I determined that Mel Spectrograms yielded the highest performance, achieving approximately 90% validation accuracy and confirming the viability of our approach.  
-*The confusion matrix for the initial speech model, showing high accuracy across all 8 command labels.*    
+![Speech Commands Heatmap](https://raw.githubusercontent.com/bsmith709/portfolio-site/main/static/SpeechCommandsModel1.png)    
 
 ##### Hardware Research  
 Concurrently, I researched hardware and selected the Raspberry Pi 5 as a powerful single-board computer (SBC) and the Raspberry Pi Pico as a low-power microcontroller target. 
@@ -39,7 +39,7 @@ To improve performance, I rewrote the training script (respiratory\_CNN-2.py) to
 
 ##### Advanced Model Iteration  
 To meet a new accuracy target of \>70%, I further refined the process. A new script (format\_dataset-3.py) filtered the dataset to only include high-quality samples (44.1kHz). I then improved the model architecture (respiratory\_CNN-3.py) with LeakyReLU activations and SpatialDropout2D layers. These changes successfully pushed the model's accuracy above the required threshold, confirmed with a final evaluation script (CNN\_Evaluations-3.py).  
-*The training history of the final 2D respiratory model, showing validation accuracy consistently above the 70% target.*
+![Respiratory Model Accuracy/Loss](https://raw.githubusercontent.com/bsmith709/portfolio-site/main/static/RespiratoryModel1.png)
 
 ### **Phase 3: Pico Deployment and Memory Constraints**
 *(January 20, 2025 \- February 3, 2025)*  
@@ -73,7 +73,6 @@ I flashed the ESP32 with MicroPython and the TensorFlow Lite interpreter. I then
 
 ##### End-to-End System Demo  
 Finally, I combined these modules into a single script (1D\_CNN\_ESP32.py). This program orchestrated a complete workflow: on a button press, it recorded 1 second of audio, ran inference with the speech commands model, displayed the prediction on the LCD, and sent the result to a server over WiFi. This created a fully functional, self-contained embedded ML prototype that served as the blueprint for the final device.  
-*The Keyestudio ESP32 kit running the final integrated script, displaying a prediction on the LCD screen.*
 
 ### **Phase 6: Final Deployment on Google Coral**
 *(March 17 \- April 14, 2025\)*  
