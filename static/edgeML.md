@@ -7,7 +7,7 @@ The project progressed through six distinct phases, beginning with foundational 
 
 ### **Phase 1: Research, and Speech Commands Model Creation/Compression**
 
-*(October 24 \- November 17, 2024\)*  
+*(October 21 \- November 18, 2024\)*  
 The project began with an accelerated course in machine learning principles, covering neural networks, backpropagation, and CNN/RNN architectures.  
 Data Preprocessing and Feature Extraction  
 The first practical step was to establish a data pipeline for a proof-of-concept model using the "Mini Speech Commands" dataset. I developed a Python script (waveform\_transformations.py) to process raw audio into various 2D representations suitable for a CNN, including standard spectrograms, Mel Spectrograms, and Mel-Frequency Cepstral Coefficients (MFCCs).  
@@ -23,7 +23,7 @@ This phase concluded with a real-time demo (quantized\_CNN\_demo.py) that captur
 
 ### **Phase 2: Respiratory Model Creation and Optimization**
 
-*(December 1, 2024 \- Start of Second Semester)*  
+*(November 18, 2024 \- December 2, 2024)*  
 This phase shifted to the project's primary goal: classifying respiratory sounds.  
 Dataset Acquisition and Initial Model  
 I sourced the "Respiratory Sound Database" from Kaggle and wrote a script (format\_dataset-orig.py) to parse annotations and slice the audio into clips containing crackles, wheezes, both, or normal breathing. An initial CNN model (Respiratory\_CNN-orig.py) trained on this data performed poorly, highlighting the need for a more rigorous methodology.  
@@ -35,7 +35,7 @@ To meet a new accuracy target of \>70%, I further refined the process. A new scr
 
 ### **Phase 3: Pico Deployment and Memory Constraints**
 
-*(Concluded February 4, 2025\)*  
+*(January 20, 2025 \- February 3, 2025)*  
 The first hardware target was the resource-constrained Raspberry Pi Pico.  
 Pivoting to a Simpler Model  
 I first attempted to deploy a stripped-down, quantized version of the respiratory model (Respiratory\_CNN-4.py). While the model could be stored in the Pico's flash memory, there was insufficient RAM (264KB) to load the interpreter and run inference. This forced a strategic pivot to the much smaller speech commands model to validate the deployment workflow.  
@@ -44,7 +44,7 @@ I engineered a system where a PC handled audio capture and streaming. A Python s
 
 ### **Phase 4: Transition to 1D CNN Architecture**
 
-*(February 4 \- February 23, 2025\)*  
+*(February 3, 2025 \- February 24, 2025\)*  
 To address the memory issues and improve efficiency, we transitioned from 2D CNNs (processing images) to 1D CNNs (processing raw audio waveforms), eliminating the need for on-device spectrogram generation.  
 Model Development and Enhancement  
 I first adapted a baseline 1D model for respiratory data (respiratory\_CNN\_1D.py). When its accuracy proved insufficient, I engineered an improved version (Respiratory\_CNN\_1D-2.py) that integrated a Multi-Head Temporal Attention mechanism. This allowed the model to focus on the most salient parts of the audio waveform, significantly improving classification accuracy.  
@@ -53,7 +53,7 @@ To further enhance robustness, I implemented a full data augmentation pipeline i
 
 ### **Phase 5: ESP32 Prototyping and System Integration**
 
-*(February 23 \- March 16, 2025\)*  
+*(February 24, 2025 \- March 17, 2025\)*  
 The next prototype was built on the more powerful Keyestudio ESP32 Inventor Starter Kit.  
 Platform Setup and Integration  
 I flashed the ESP32 with MicroPython and the TensorFlow Lite interpreter. I then developed a series of scripts to test and integrate each peripheral: microphone input (mic\_test.py), LCD output (lcd\_test.py), and WiFi communication to a Flask server (wifi\_test.py, server.py).  
@@ -63,7 +63,7 @@ Finally, I combined these modules into a single main.py script. This program orc
 
 ### **Phase 6: Final Deployment on Google Coral**
 
-*(March 16 \- April 13, 2025\)*  
+*(March 17 \- April 14, 2025\)*  
 The final phase utilized the Google Coral Dev Board, leveraging its Edge TPU for accelerated inference.  
 Hardware and Model Pivots  
 I began by deploying TFLite versions of our respiratory, PPG, and ECG models to the Coral. For data acquisition, I 3D printed and assembled an open-source "Stethogram," a digital stethoscope. While it could detect a heartbeat, it was unable to reliably capture lung sounds.  
