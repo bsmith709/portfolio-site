@@ -14,7 +14,7 @@ The project began with an accelerated course in machine learning principles, cov
 The first practical step was to establish a data pipeline for a proof-of-concept model using the "Mini Speech Commands" dataset. I developed a Python script (waveform\_transformations.py) to process raw audio into various 2D representations suitable for a CNN, including standard spectrograms, Mel Spectrograms, and Mel-Frequency Cepstral Coefficients (MFCCs).    
 
 ##### Initial CNN Model Development  
-Using TensorFlow/Keras, I built and trained a CNN (data\_preprocessing.py) to classify the 8 keywords. After testing the different feature types, I determined that Mel Spectrograms yielded the highest performance, achieving approximately 90% validation accuracy and confirming the viability of our approach.  
+Using TensorFlow/Keras, I built and trained a CNN (TF\_CNN.py) to classify the 8 keywords. After testing the different feature types, I determined that Mel Spectrograms yielded the highest performance, achieving approximately 90% validation accuracy and confirming the viability of our approach.  
 *The confusion matrix for the initial speech model, showing high accuracy across all 8 command labels.*    
 
 ##### Hardware Research  
@@ -32,13 +32,13 @@ This phase concluded with a real-time demo (quantized\_CNN\_demo.py) that captur
 This phase shifted to the project's primary goal: classifying respiratory sounds.    
 
 ##### Dataset Acquisition and Initial Model  
-I sourced the "Respiratory Sound Database" from Kaggle and wrote a script (format\_dataset-orig.py) to parse annotations and slice the audio into clips containing crackles, wheezes, both, or normal breathing. An initial CNN model (Respiratory\_CNN-orig.py) trained on this data performed poorly, highlighting the need for a more rigorous methodology.  
+I sourced the "Respiratory Sound Database" from Kaggle and wrote a script (format\_dataset-1.py) to parse annotations and slice the audio into clips containing crackles, wheezes, both, or normal breathing. An initial CNN model (respiratory\_CNN-1.py) trained on this data performed poorly, highlighting the need for a more rigorous methodology.  
 
 ##### Systematic Optimization  
-To improve performance, I rewrote the training script (Respiratory\_CNN-2.py) to systematically test every combination of dataset variants (variable vs. 8-second padded clips), preprocessing methods (Spectrogram, Mel Spectrogram, MFCC), and seven different TensorFlow optimizers. This exhaustive search allowed me to empirically identify the optimal configuration: the Adam optimizer with Mel Spectrograms.  
+To improve performance, I rewrote the training script (respiratory\_CNN-2.py) to systematically test every combination of dataset variants (variable vs. 8-second padded clips), preprocessing methods (Spectrogram, Mel Spectrogram, MFCC), and seven different TensorFlow optimizers. This exhaustive search allowed me to empirically identify the optimal configuration: the Adam optimizer with Mel Spectrograms.  
 
 ##### Advanced Model Iteration  
-To meet a new accuracy target of \>70%, I further refined the process. A new script (format\_dataset.py) filtered the dataset to only include high-quality samples (44.1kHz). I then improved the model architecture (Respiratory\_CNN-3.py) with LeakyReLU activations and SpatialDropout2D layers. These changes successfully pushed the model's accuracy above the required threshold, confirmed with a final evaluation script (CNN\_Evaluations-2.py).  
+To meet a new accuracy target of \>70%, I further refined the process. A new script (format\_dataset-3.py) filtered the dataset to only include high-quality samples (44.1kHz). I then improved the model architecture (respiratory\_CNN-3.py) with LeakyReLU activations and SpatialDropout2D layers. These changes successfully pushed the model's accuracy above the required threshold, confirmed with a final evaluation script (CNN\_Evaluations-3.py).  
 *The training history of the final 2D respiratory model, showing validation accuracy consistently above the 70% target.*
 
 ### **Phase 3: Pico Deployment and Memory Constraints**
@@ -47,7 +47,7 @@ To meet a new accuracy target of \>70%, I further refined the process. A new scr
 The first hardware target was the resource-constrained Raspberry Pi Pico.  
 
 ##### Pivoting to a Simpler Model  
-I first attempted to deploy a stripped-down, quantized version of the respiratory model (Respiratory\_CNN-4.py). While the model could be stored in the Pico's flash memory, there was insufficient RAM (264KB) to load the interpreter and run inference. This forced a strategic pivot to the much smaller speech commands model to validate the deployment workflow.  
+I first attempted to deploy a stripped-down, quantized version of the respiratory model (respiratory\_CNN-4.py). While the model could be stored in the Pico's flash memory, there was insufficient RAM (264KB) to load the interpreter and run inference. This forced a strategic pivot to the much smaller speech commands model to validate the deployment workflow.  
 
 ##### PC-to-Pico Inference Pipeline  
 I engineered a system where a PC handled audio capture and streaming. A Python script (send\_data.py) transmitted audio data over UART to the Pico. On the device, an Arduino script (sketch\_feb4a.ino) loaded the TFLite model, received the data, ran inference using the TensorFlow Lite for Microcontrollers interpreter, and sent the prediction back to the PC. This successfully demonstrated a complete inference pipeline on a microcontroller, providing valuable lessons on the trade-offs between model complexity and hardware limitations.
@@ -58,7 +58,7 @@ I engineered a system where a PC handled audio capture and streaming. A Python s
 To address the memory issues and improve efficiency, we transitioned from 2D CNNs (processing images) to 1D CNNs (processing raw audio waveforms), eliminating the need for on-device spectrogram generation.  
 
 ##### Model Development and Enhancement  
-I first adapted a baseline 1D model for respiratory data (respiratory\_CNN\_1D.py). When its accuracy proved insufficient, I engineered an improved version (Respiratory\_CNN\_1D-2.py) that integrated a Multi-Head Temporal Attention mechanism. This allowed the model to focus on the most salient parts of the audio waveform, significantly improving classification accuracy.  
+I first adapted a baseline 1D model for respiratory data (respiratory\_CNN\_1D-1.py). When its accuracy proved insufficient, I engineered an improved version (respiratory\_CNN\_1D-2.py) that integrated a Multi-Head Temporal Attention mechanism. This allowed the model to focus on the most salient parts of the audio waveform, significantly improving classification accuracy.  
 
 ##### Data Augmentation Pipeline  
 To further enhance robustness, I implemented a full data augmentation pipeline in PyTorch (Respiratory\_CNN\_1D-3.py). During training, this script would randomly apply transformations to the audio samples, including adding Gaussian noise, applying random gain, time-shifting, and inverting polarity. This process created a more resilient model, marking a successful pivot to a more efficient 1D architecture.
@@ -72,7 +72,7 @@ The next prototype was built on the more powerful Keyestudio ESP32 Inventor Star
 I flashed the ESP32 with MicroPython and the TensorFlow Lite interpreter. I then developed a series of scripts to test and integrate each peripheral: microphone input (mic\_test.py), LCD output (lcd\_test.py), and WiFi communication to a Flask server (wifi\_test.py, server.py).  
 
 ##### End-to-End System Demo  
-Finally, I combined these modules into a single main.py script. This program orchestrated a complete workflow: on a button press, it recorded 1 second of audio, ran inference with the speech commands model, displayed the prediction on the LCD, and sent the result to a server over WiFi. This created a fully functional, self-contained embedded ML prototype that served as the blueprint for the final device.  
+Finally, I combined these modules into a single script (1D\_CNN\_ESP32.py). This program orchestrated a complete workflow: on a button press, it recorded 1 second of audio, ran inference with the speech commands model, displayed the prediction on the LCD, and sent the result to a server over WiFi. This created a fully functional, self-contained embedded ML prototype that served as the blueprint for the final device.  
 *The Keyestudio ESP32 kit running the final integrated script, displaying a prediction on the LCD screen.*
 
 ### **Phase 6: Final Deployment on Google Coral**
