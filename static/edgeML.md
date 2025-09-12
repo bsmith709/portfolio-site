@@ -6,8 +6,8 @@ This report details a multi-semester senior design project focused on creating a
 The project progressed through six distinct phases, beginning with foundational research and culminating in a final, integrated prototype on the Google Coral Dev Board.
 
 ### **Phase 1: Research, and Speech Commands Model Creation/Compression**
-
 *(October 21 \- November 18, 2024\)*  
+
 The project began with an accelerated course in machine learning principles, covering neural networks, backpropagation, and CNN/RNN architectures.    
 
 ##### Data Preprocessing and Feature Extraction
@@ -18,16 +18,17 @@ Using TensorFlow/Keras, I built and trained a CNN (data\_preprocessing.py) to cl
 *The confusion matrix for the initial speech model, showing high accuracy across all 8 command labels.*    
 
 ##### Hardware Research  
-Concurrently, I researched hardware and selected the Raspberry Pi 5 as a powerful single-board computer (SBC) and the Raspberry Pi Pico as a low-power microcontroller target.  
-Model Optimization and Challenges  
+Concurrently, I researched hardware and selected the Raspberry Pi 5 as a powerful single-board computer (SBC) and the Raspberry Pi Pico as a low-power microcontroller target. 
+
+##### Model Optimization and Challenges  
 To prepare for deployment, I successfully applied post-training quantization (quantize.py), shrinking the model from 18.6 MB to 1.55 MB with minimal accuracy loss. An attempt to deploy to a Banana Pi M4 was abandoned due to significant dependency and support issues, a key lesson in hardware selection.    
 
 ##### Live Inference Demo  
 This phase concluded with a real-time demo (quantized\_CNN\_demo.py) that captured microphone audio on a laptop, processed it, and fed it to the quantized TFLite model for live inference, successfully proving the end-to-end concept.
 
 ### **Phase 2: Respiratory Model Creation and Optimization**
-
 *(November 18, 2024 \- December 2, 2024)*  
+
 This phase shifted to the project's primary goal: classifying respiratory sounds.    
 
 ##### Dataset Acquisition and Initial Model  
@@ -41,8 +42,8 @@ To meet a new accuracy target of \>70%, I further refined the process. A new scr
 *The training history of the final 2D respiratory model, showing validation accuracy consistently above the 70% target.*
 
 ### **Phase 3: Pico Deployment and Memory Constraints**
-
 *(January 20, 2025 \- February 3, 2025)*  
+
 The first hardware target was the resource-constrained Raspberry Pi Pico.  
 
 ##### Pivoting to a Simpler Model  
@@ -52,8 +53,8 @@ I first attempted to deploy a stripped-down, quantized version of the respirator
 I engineered a system where a PC handled audio capture and streaming. A Python script (send\_data.py) transmitted audio data over UART to the Pico. On the device, an Arduino script (sketch\_feb4a.ino) loaded the TFLite model, received the data, ran inference using the TensorFlow Lite for Microcontrollers interpreter, and sent the prediction back to the PC. This successfully demonstrated a complete inference pipeline on a microcontroller, providing valuable lessons on the trade-offs between model complexity and hardware limitations.
 
 ### **Phase 4: Transition to 1D CNN Architecture**
-
 *(February 3, 2025 \- February 24, 2025\)*  
+
 To address the memory issues and improve efficiency, we transitioned from 2D CNNs (processing images) to 1D CNNs (processing raw audio waveforms), eliminating the need for on-device spectrogram generation.  
 
 ##### Model Development and Enhancement  
@@ -63,8 +64,8 @@ I first adapted a baseline 1D model for respiratory data (respiratory\_CNN\_1D.p
 To further enhance robustness, I implemented a full data augmentation pipeline in PyTorch (Respiratory\_CNN\_1D-3.py). During training, this script would randomly apply transformations to the audio samples, including adding Gaussian noise, applying random gain, time-shifting, and inverting polarity. This process created a more resilient model, marking a successful pivot to a more efficient 1D architecture.
 
 ### **Phase 5: ESP32 Prototyping and System Integration**
-
 *(February 24, 2025 \- March 17, 2025\)*  
+
 The next prototype was built on the more powerful Keyestudio ESP32 Inventor Starter Kit.  
 
 ##### Platform Setup and Integration  
@@ -75,8 +76,8 @@ Finally, I combined these modules into a single main.py script. This program orc
 *The Keyestudio ESP32 kit running the final integrated script, displaying a prediction on the LCD screen.*
 
 ### **Phase 6: Final Deployment on Google Coral**
-
 *(March 17 \- April 14, 2025\)*  
+
 The final phase utilized the Google Coral Dev Board, leveraging its Edge TPU for accelerated inference.  
 
 ##### Hardware and Model Pivots  
