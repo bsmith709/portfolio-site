@@ -8,10 +8,10 @@
 </script>
 
 {#if githubUrl}
-	<div class="-mt-4 pb-4 flex items-center gap-4 border-b border-main-100">
+	<div class="-mt-4 pb-2 flex items-center gap-4 border-b border-main-100">
 		<a href={githubUrl} target="_blank" rel="noopener noreferrer">
-			<Button variant="primary" size="md">
-				<Icon name="github" class="w-4 h-4 xl:w-5 xl:h-5" />
+			<Button variant="primary" size="sm" class="lg:text-sm lg:gap-2">
+				<Icon name="github" class="w-4 h-4" />
 				<span>View on GitHub</span>
 			</Button>
 		</a>

@@ -8,7 +8,7 @@ githubUrl: 'https://github.com/bsmith709/EvolutionSim'
     import ActionBar from "$lib/components/ActionBar.svelte";
     import CodeSnippet from "$lib/components/CodeSnippet.svelte";
 
-    // Import the raw text content of your code snippet files
+    // Import the raw text content of code snippet files
     import geneticSnippet from "$lib/snippets/evolutionSim/genetic-inheritance.cpp?raw";
     import aiStateSnippet from "$lib/snippets/evolutionSim/actor-ai-state-machine.cpp?raw";
     import guiPlotSnippet from "$lib/snippets/evolutionSim/gui-data-plotting.cpp?raw";

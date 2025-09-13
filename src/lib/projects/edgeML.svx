@@ -8,9 +8,10 @@ githubUrl: 'https://github.com/bsmith709/Respiratory-Edge-ML'
     import ActionBar from "$lib/components/ActionBar.svelte";
     import CodeSnippet from "$lib/components/CodeSnippet.svelte";
 
-    const finalCoralScript = `
-import numpy as np
-`;
+    // Import the raw text content of code snippet files
+    import temporalAttentionSnippet from "$lib/snippets/edgeML/temporal-attention.py?raw";
+    import augmentationSnippet from "$lib/snippets/edgeML/data-augmentation.py?raw";
+    import coralSnippet from "$lib/snippets/edgeML/coral-inference.py?raw";
 </script>
 
 
@@ -56,7 +57,7 @@ I sourced the "Respiratory Sound Database" from Kaggle and wrote a script (forma
 To improve performance, I rewrote the training script (respiratory\_CNN-2.py) to systematically test every combination of dataset variants (variable vs. 8-second padded clips), preprocessing methods (Spectrogram, Mel Spectrogram, MFCC), and seven different TensorFlow optimizers. This exhaustive search allowed me to empirically identify the optimal configuration: the Adam optimizer with Mel Spectrograms.  
 
 ### Advanced Model Iteration  
-To meet a new accuracy target of \>70%, I further refined the process. A new script (format\_dataset-3.py) filtered the dataset to only include high-quality samples (44.1kHz). I then improved the model architecture (respiratory\_CNN-3.py) with LeakyReLU activations and SpatialDropout2D layers. These changes successfully pushed the model's accuracy above the required threshold, confirmed with a final evaluation script (CNN\_Evaluations-3.py).  
+To meet a new accuracy target of \>70%, I further refined the process. A new script (format\_dataset-3.py) filtered the dataset to only include high-quality samples (44.1kHz). I then improved the model architecture (respiratory\_CNN-3.py) with LeakyReLU activations and SpatialDropout2D layers. These changes successfully pushed the model's accuracy above the required threshold, confirmed with a final evaluation script (CNN\_Evaluations-3.py).
 ![Respiratory Model Accuracy/Loss](https://raw.githubusercontent.com/bsmith709/portfolio-site/main/static/RespiratoryModel1.png)
 
 ## **Phase 3: Pico Deployment and Memory Constraints**
@@ -76,10 +77,22 @@ I engineered a system where a PC handled audio capture and streaming. A Python s
 To address the memory issues and improve efficiency, we transitioned from 2D CNNs (processing images) to 1D CNNs (processing raw audio waveforms), eliminating the need for on-device spectrogram generation.  
 
 ### Model Development and Enhancement  
-I first adapted a baseline 1D model for respiratory data (respiratory\_CNN\_1D-1.py). When its accuracy proved insufficient, I engineered an improved version (respiratory\_CNN\_1D-2.py) that integrated a Multi-Head Temporal Attention mechanism. This allowed the model to focus on the most salient parts of the audio waveform, significantly improving classification accuracy.  
+I first adapted a baseline 1D model for respiratory data (respiratory\_CNN\_1D-1.py). When its accuracy proved insufficient, I engineered an improved version (respiratory\_CNN\_1D-2.py) that integrated a Multi-Head Temporal Attention mechanism. This allowed the model to focus on the most salient parts of the audio waveform, significantly improving classification accuracy.
+
+<CodeSnippet
+    title="Multi-Head Temporal Attention (respiratory_CNN_1D-2.py)"
+    language="py"
+    code={temporalAttentionSnippet}
+/>
 
 ### Data Augmentation Pipeline  
 To further enhance robustness, I implemented a full data augmentation pipeline in PyTorch (Respiratory\_CNN\_1D-3.py). During training, this script would randomly apply transformations to the audio samples, including adding Gaussian noise, applying random gain, time-shifting, and inverting polarity. This process created a more resilient model, marking a successful pivot to a more efficient 1D architecture.
+
+<CodeSnippet
+    title="Data Augmentation Pipeline (respiratory_CNN_1D-3.py)"
+    language="py"
+    code={augmentationSnippet}
+/>
 
 ## **Phase 5: ESP32 Prototyping and System Integration**
 *(February 24, 2025 \- March 17, 2025\)*  
@@ -109,6 +122,6 @@ The final script (resp\_disease\_model.py) brought everything together. It captu
 
 <CodeSnippet
     title="Final Inference Loop (resp_disease_model.py)"
-    language="python"
-    code={finalCoralScript}
+    language="py"
+    code={coralSnippet}
 />
