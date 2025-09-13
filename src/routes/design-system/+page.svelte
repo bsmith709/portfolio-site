@@ -36,6 +36,20 @@
       ]
     },
     {
+      name: 'Neutral Colors',
+      colors: [
+        { name: 'Neutral-100', class: 'bg-neutral-100' },
+        { name: 'Neutral-200', class: 'bg-neutral-200' },
+        { name: 'Neutral-300', class: 'bg-neutral-300' },
+        { name: 'Neutral-400', class: 'bg-neutral-400' },
+        { name: 'Neutral-500', class: 'bg-neutral-500' },
+        { name: 'Neutral-600', class: 'bg-neutral-600' },
+        { name: 'Neutral-700', class: 'bg-neutral-700' },
+        { name: 'Neutral-800', class: 'bg-neutral-800' },
+        { name: 'Neutral-900', class: 'bg-neutral-900' }
+      ]
+    },
+    {
       name: 'Semantic Success',
       colors: [
         { name: 'Success-100', class: 'bg-semantic-green-100' },
@@ -77,20 +91,6 @@
         { name: 'Error-900', class: 'bg-semantic-red-900' }
       ]
     },
-    {
-      name: 'Neutral Colors',
-      colors: [
-        { name: 'Neutral-100', class: 'bg-neutral-100' },
-        { name: 'Neutral-200', class: 'bg-neutral-200' },
-        { name: 'Neutral-300', class: 'bg-neutral-300' },
-        { name: 'Neutral-400', class: 'bg-neutral-400' },
-        { name: 'Neutral-500', class: 'bg-neutral-500' },
-        { name: 'Neutral-600', class: 'bg-neutral-600' },
-        { name: 'Neutral-700', class: 'bg-neutral-700' },
-        { name: 'Neutral-800', class: 'bg-neutral-800' },
-        { name: 'Neutral-900', class: 'bg-neutral-900' }
-      ]
-    }
   ];
 
   const fontScale = [

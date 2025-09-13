@@ -6,7 +6,7 @@
 
   // Define the types for the component's props for strong type safety.
   type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link' | string;
-  type Size = 'sm' | 'md' | 'lg' | 'icon' | 'custom'
+  type Size = 'sm' | 'md' | 'lg' | 'icon' | 'custom' | string;
   type ButtonType = 'button' | 'submit' | 'reset';
 
   // Use Svelte 5's $props() rune for declaring component properties.

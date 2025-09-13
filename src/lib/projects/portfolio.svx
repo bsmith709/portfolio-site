@@ -1,0 +1,92 @@
+---
+title: 'Machine Learning on Edge Devices'
+description: 'A self-contained system that runs a quantized respiratory disease model on a Google Coral Edge TPU, capable of performing real-time audio analysis for health monitoring.'
+githubUrl: 'https://github.com/bsmith709/portfolio-site'
+---
+
+<script lang="ts">
+    import ActionBar from "$lib/components/ActionBar.svelte";
+    import Button from "$lib/components/Button.svelte";
+    import CodeSnippet from "$lib/components/CodeSnippet.svelte";
+
+    import buttonSnippet from "$lib/components/Button.svelte?raw";
+    import pageLoaderSnippet from '$lib/snippets/portfolio/page.ts?raw';
+    import tocSnippet from '$lib/components/TableOfContents.svelte?raw';
+</script>
+
+
+# **Personal Portfolio & Design System**
+
+<ActionBar {githubUrl}>	
+    {#snippet actions()}
+        <a href="design-system" target="_blank" rel="noopener noreferrer">
+			<Button variant="primary" size="sm" class="lg:text-sm lg:gap-2">
+				<span>Design System</span>
+			</Button>
+		</a>
+    {/snippet}
+</ActionBar>
+
+## **Project Overview**
+
+This portfolio is a comprehensive showcase of my skills, built from the ground up to reflect my engineering philosophy of creating simple, elegant, and maintainable solutions. I developed this fully responsive website using a modern tech stack centered on SvelteKit, TypeScript, and Tailwind CSS. The entire project is open-source and version-controlled with Git, with a detailed commit history available on its GitHub repository.
+A core feature of this project is its integrated design system. Rather than treating design as an afterthought, I began by building a complete and self-documented visual language for the site. This foundational work ensured consistency and streamlined the development of all other components. I also took heavy inspiration from the fantastic [portfolio of Brittany Chiang](https://brittanychiang.com/) for the layout and design.  
+
+## **Phase 1: Foundational Design System**
+
+The first phase of development was dedicated to creating a robust and scalable design system.  
+
+### Systemic Design and Theming  
+I began by establishing the core visual identity in app.css. This involved defining a full color palette with semantic naming conventions (main, secondary, neutral, success, warning, error), setting up a typographic scale, and creating a consistent spacing and border system. I implemented these as Tailwind CSS theme variables to create a centralized and easily modifiable theme.  
+
+### Component-Driven Development  
+With the design language in place, I moved on to building a library of reusable Svelte components. The first components I developed were the foundational building blocks of the UI:
+
+* A highly configurable `<Button>` component with multiple variants (primary, ghost, link) and sizes.  
+* A performant `<Icon>` component that manages all SVG data internally to reduce HTTP requests.  
+* A responsive `<Card>` component designed to showcase project summaries.  
+
+<CodeSnippet
+    title="Reusable Button Component (Button.svelte)"
+    language="svelte"
+    code={buttonSnippet}
+/>
+
+I created a dedicated page for the design system itself, providing a live, interactive reference for every component and style, ensuring that future development would remain consistent.
+
+## **Phase 2: Main Page and Responsive Layout**
+
+This phase focused on assembling the main page and ensuring a seamless user experience across all device sizes.  
+
+### Mobile-First Implementation  
+I took a mobile-first approach, initially building out the main page with a clean, single-column layout that is optimized for small screens. This involved creating distinct Svelte components for each major section (Hero, About, Projects, Skills, Contact) and composing them on the main page.  
+
+### Adaptive Desktop Layout  
+Once the mobile view was complete, I implemented a more complex layout for larger screens. Using Tailwind CSS's responsive prefixes, I transitioned the layout into a two-column design at the lg breakpoint. The left column, containing the main Hero component, becomes sticky, keeping my key information visible while the user scrolls through the detailed content in the right column.
+
+## **Phase 3: Project Detail Pages and Advanced Features**
+
+The final phase involved building out the individual pages for each project and adding advanced features to enhance the user experience.  
+
+### Dynamic Routing and Content Loading  
+I leveraged SvelteKit's file-based routing to create dynamic pages for each project. To keep the content clean and easy to manage, I wrote the detailed project reports in Markdown and used MDsvex (.svx files) to allow for the use of Svelte components directly within the Markdown. I created a load function in \+page.ts that uses Vite's import.meta.glob to dynamically import and render the correct content based on the URL slug.  
+
+<CodeSnippet
+    title="Dynamic Page Loader (+page.ts)"
+    language="ts"
+    code={pageLoaderSnippet}
+/>
+
+### Interactive Enhancements  
+To make the project pages more engaging, I added several interactive components:
+
+* A YouTube component for embedding video demonstrations in a responsive, aspect-ratio-preserved container.  
+* A CodeSnippet component that uses highlight.js for syntax-highlighted code blocks, complete with a hide/show toggle to keep the layout clean.  
+* A "scrollspy" `<TableOfContents>` component that uses an IntersectionObserver to track the user's scroll position and automatically highlight the current section.
+
+<CodeSnippet
+    title="Scrollspy Table of Contents (TableOfContents.svelte)"
+    language="svelte"
+    code={tocSnippet}
+    startExpanded={true}
+/>

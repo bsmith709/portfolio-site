@@ -57,13 +57,15 @@
         tags={['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Component Design']}
     >
         {#snippet actions()}
-        <Button 
-            variant="link" 
-            class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
-        >
-            Learn More
-            <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
-        </Button>
+        <a href="portfolio">
+            <Button 
+                variant="link" 
+                class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
+            >
+                Learn More
+                <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
+            </Button>
+        </a>
         {/snippet}
     </Card>
 </div>

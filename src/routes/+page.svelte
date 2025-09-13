@@ -28,13 +28,14 @@
         </section>
 
         <footer class="w-full border-t border-neutral-800 text-center py-4 text-sm text-neutral-500">
-            <p>© {new Date().getFullYear()} Blake Smith. All rights reserved.</p>
-            <p>Built with SvelteKit & TailwindCSS.</p>
-            <a href="/design-system" class="text-neutral-400 hover:text-main-100 transition-colors inline-flex items-center gap-1 mt-1">
-                <Button variant="link">
+            <a href="/design-system" class="hover:text-main-100 transition-colors inline-flex items-center gap-1 mt-1">
+                <Button variant="link" class="text-neutral-200">
                     View Design System
                 </Button>
             </a>
+            <p>Built with SvelteKit & TailwindCSS.</p>
+            <p>Design and layout heavily inspired by the work of Brittany Chiang.</p>
+            <p>© {new Date().getFullYear()} Blake Smith. All rights reserved.</p>
         </footer>
     </main>
 </div> 
