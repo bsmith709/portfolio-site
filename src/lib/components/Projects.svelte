@@ -19,13 +19,15 @@
         tags={['Python', 'C++', 'TensorFlow', 'TFLite', 'Google Coral', 'ESP32', 'Raspberry Pi Pico', '3D Printing']}
     >
         {#snippet actions()}
-        <Button 
-            variant="link" 
-            class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
-        >
-            Learn More
-            <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
-        </Button>
+        <a href="edgeML">
+            <Button 
+                variant="link" 
+                class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
+            >
+                Learn More
+                <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
+            </Button>
+        </a>
         {/snippet}
     </Card>
 
@@ -36,13 +38,15 @@
         tags={['C++', 'AI State Machines', 'Genetic Algorithms', 'ImGui', 'ImPlot']}
     >
         {#snippet actions()}
-        <Button 
-            variant="link" 
-            class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
-        >
-            Learn More
-            <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
-        </Button>
+        <a href="evolutionSim">
+            <Button
+                variant="link" 
+                class="text-sm @md:text-base @xl:text-lg @4xl:text-xl"
+            >
+                Learn More
+                <Icon name="link" class="h-3 w-3 sm:h-4 sm:w-4" />
+            </Button>
+        </a>
         {/snippet}
     </Card>
 

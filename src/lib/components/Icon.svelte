@@ -1,5 +1,5 @@
 <script lang="ts">
-    type IconName = 'arrow-down-tray' | 'arrow-right' | 'github' | 'link' | 'handshake' | 'arrow-up-right' | null;
+    type IconName = 'arrow-down-tray' | 'arrow-right' | 'arrow-left' | 'github' | 'link' | 'handshake' | 'arrow-up-right' | null;
 
     const {
         name = null as IconName,
@@ -30,6 +30,12 @@
             'arrow-right',
             {
                 paths: '<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />',
+            }
+        ],
+        [
+            'arrow-left',
+            {
+                paths: '<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />'
             }
         ],
         [
