@@ -7,6 +7,7 @@ githubUrl: 'https://github.com/bsmith709/EvolutionSim'
 <script lang="ts">
     import ActionBar from "$lib/components/ActionBar.svelte";
     import CodeSnippet from "$lib/components/CodeSnippet.svelte";
+    import YouTube from "$lib/components/YouTube.svelte";
 
     // Import the raw text content of code snippet files
     import geneticSnippet from "$lib/snippets/evolutionSim/genetic-inheritance.cpp?raw";
@@ -23,7 +24,7 @@ githubUrl: 'https://github.com/bsmith709/EvolutionSim'
 I developed this project as my final for CS4350: Fundamentals of Game Engine Design. It is an agent-based 3D evolution simulator built in C++ within my professor's custom game engine, AftrBurner. Inspired by a fascination with emergent behavior, I created a simulation where autonomous "actors" evolve based on environmental pressures. The core of the project was observing how complex survival and social strategies arise from a simple set of genetic rules, environmental constraints, and interactions with AI predators.  
 The simulation runs on a fixed timestep and is highly customizable through an ImGui-based interface, which allows for real-time adjustments to over 40 parameters and visualization of evolutionary trends through data plots.
 
-**EMBED VIDEO:** [https://youtu.be/xcH7nGzvxvY](https://youtu.be/xcH7nGzvxvY)
+<YouTube id="xcH7nGzvxvY" title="AI Evolution Simulator Demonstration" />
 
 ## **Phase 1: Core Systems and Survival Loop**
 
