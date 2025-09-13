@@ -54,19 +54,19 @@
 </script>
 
 
-<div class="max-w-7xl mx-auto mb-6">
-    <a href="/" class="text-main-300 hover:text-main-100 my-5 inline-flex items-center gap-2 font-semibold lg:text-2xl">
-        <Icon name="arrow-left" class="w-4 h-4" />
+<div class="max-w-7xl mx-5 mb-6 lg:mx-6 xl:mx-auto">
+    <a href="/" class="w-full backdrop-blur bg-neutral-900/75 text-main-300 hover:text-main-100 py-5 inline-flex items-center gap-2 font-semibold sm:text-lg lg:text-xl xl:text-2xl lg:sticky lg:top-0 lg:-mx-10 lg:px-10">
+        <Icon name="arrow-left" class="w-3 h-3 sm:w-4 sm:h-4" />
         Back
     </a>
 
-    <div class="lg:grid lg:grid-cols-4 lg:gap-6">
-        <div class="lg:col-span-3 mb-15">
-            <article bind:this={articleEl} class="prose lg:prose-lg prose-invert max-w-none">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-8 xl:gap-6">
+        <div class="lg:col-span-3 lg:mb-15">
+            <article bind:this={articleEl} class="prose xl:prose-lg prose-invert max-w-none">
                 <data.content/>
             </article>
         </div>
-        <div class="lg:col-span-1">
+        <div class="hidden lg:block lg:col-span-1">
             <TableOfContents {links} {activeId} />
         </div>
     </div>

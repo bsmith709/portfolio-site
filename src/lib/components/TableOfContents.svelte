@@ -33,8 +33,8 @@
 
     // Contains ONLY layout and font-size styles for each level
     const levelLayoutClasses: Record<number, string> = {
-        2: 'mt-6',
-        3: 'pl-4 text-sm',
+        2: 'mt-6 text-sm xl:text-base',
+        3: 'pl-4 text-xs xl:text-sm',
     };
 
     // Contains ONLY the default (non-active) color for each level

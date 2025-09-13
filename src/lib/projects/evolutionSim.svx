@@ -1,4 +1,16 @@
+---
+title: 'AI Evolution Simulator'
+description: 'An agent-based evolution simulator built in C++ within a professors game engine (AftrBurner). Autonomous agents with unique genetic traits for behavior (bravery, socialness) and physics (size, speed) evolve through natural selection in a dynamic ecosystem with predators and resources.'
+githubUrl: 'https://github.com/bsmith709/EvolutionSim'
+---
+
+<script lang="ts">
+    import ActionBar from "$lib/components/ActionBar.svelte";
+</script>
+
 # **AI Evolution Simulator**
+
+<ActionBar {githubUrl}/>
 
 ## **Project Overview**
 

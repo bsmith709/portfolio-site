@@ -1,4 +1,17 @@
+---
+title: 'Machine Learning on Edge Devices'
+description: 'A self-contained system that runs a quantized respiratory disease model on a Google Coral Edge TPU, capable of performing real-time audio analysis for health monitoring.'
+githubUrl: 'https://github.com/bsmith709/Respiratory-Edge-ML'
+---
+
+<script lang="ts">
+    import ActionBar from "$lib/components/ActionBar.svelte";
+</script>
+
+
 # **Machine Learning for Respiratory Health Monitoring on Edge Devices**
+
+<ActionBar {githubUrl} />
 
 ## **Project Overview**
 
