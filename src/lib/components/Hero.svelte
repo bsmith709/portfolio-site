@@ -19,14 +19,17 @@
     </div>
 
     <div class="flex justify-between items-center mt-6 mr-2 lg:mt-9 xl:mt-11">
-        <ul class="flex items-center gap-2 sm:gap-3">
+        <ul class="flex items-center gap-2 sm:gap-4">
             <li>
                 <a href="https://github.com/bsmith709" aria-label="View my GitHub profile"><Button variant="link" size="icon" class="w-6 h-6 sm:w-7 sm:h-7"><Icon name="github"/></Button></a>
             </li>
             <li>
                 <a href="https://app.joinhandshake.com/profiles/pcbj65" aria-label="View my handshake profile"><Button variant="link" size="icon" class="w-6 h-6 sm:w-7 sm:h-7"><Icon name="handshake"/></Button></a>
             </li>
+            <li>
+                <a href="https://www.linkedin.com/in/blake-smith-343398265" aria-label="View my LinkedIn profile"><Button variant="link" size="icon" class="w-6 h-6 sm:w-7 sm:h-7"><Icon name="linkedin"/></Button></a>
+            </li>
         </ul>
-        <a href="/test.pdf" target="_blank" class="noopener noreferrer" aria-label="View my resume"><Button variant="primary" size="sm" class="sm:h-7 sm:px-4 sm:text-base sm:gap-2"><span>View Resume</span><Icon name="arrow-up-right" class="w-2 h-2 sm:w-3 sm:h-3"/></Button></a>
+        <a href="/Blake_Smith_Resume.pdf" target="_blank" class="noopener noreferrer" aria-label="View my resume"><Button variant="primary" size="sm" class="sm:h-7 sm:px-4 sm:text-base sm:gap-2"><span>View Résumé</span><Icon name="arrow-up-right" class="w-2 h-2 sm:w-3 sm:h-3"/></Button></a>
     </div>
 </div>
