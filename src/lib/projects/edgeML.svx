@@ -6,6 +6,11 @@ githubUrl: 'https://github.com/bsmith709/Respiratory-Edge-ML'
 
 <script lang="ts">
     import ActionBar from "$lib/components/ActionBar.svelte";
+    import CodeSnippet from "$lib/components/CodeSnippet.svelte";
+
+    const finalCoralScript = `
+import numpy as np
+`;
 </script>
 
 
@@ -101,3 +106,9 @@ This new model presented a major challenge: it was built with a version of Tenso
 
 ### Final Integrated System  
 The final script (resp\_disease\_model.py) brought everything together. It captures audio from the microphone, applies a Butterworth filter, and feeds the data to the Edge TPU-accelerated disease model for real-time inference. The program then prints the predicted probabilities for six different respiratory diseases. This fully self-contained system marked the successful conclusion of the project.
+
+<CodeSnippet
+    title="Final Inference Loop (resp_disease_model.py)"
+    language="python"
+    code={finalCoralScript}
+/>

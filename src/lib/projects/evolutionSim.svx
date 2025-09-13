@@ -6,6 +6,12 @@ githubUrl: 'https://github.com/bsmith709/EvolutionSim'
 
 <script lang="ts">
     import ActionBar from "$lib/components/ActionBar.svelte";
+    import CodeSnippet from "$lib/components/CodeSnippet.svelte";
+
+    // Import the raw text content of your code snippet files
+    import geneticSnippet from "$lib/snippets/evolutionSim/genetic-inheritance.cpp?raw";
+    import aiStateSnippet from "$lib/snippets/evolutionSim/actor-ai-state-machine.cpp?raw";
+    import guiPlotSnippet from "$lib/snippets/evolutionSim/gui-data-plotting.cpp?raw";
 </script>
 
 # **AI Evolution Simulator**
@@ -39,6 +45,12 @@ I implemented the reproduction system, centered around Shelters. When two actors
 * **Physical Traits (Speed, Size, Sense):** Inherited by averaging the parents' values, plus a small, random mutation.  
 * **Personality Traits (Social, Brave, Generous):** Inherited via a Mendelian model, where I gave each parent dominant or recessive alleles for each gene. This system was also subject to a configurable mutation rate that could flip an allele.
 
+<CodeSnippet
+    title="Genetic Inheritance Logic (WOShelter.cpp)"
+    language="cpp"
+    code={geneticSnippet}
+/>
+
 ### Predator AI  
 To create a more dynamic and challenging environment, I introduced Predators. I programmed these AI agents to patrol the environment using a simple state machine (PATROLLING, CHASING, GRABBING). They detect actors within a forward-facing cone and will chase the closest one. This added a significant survival pressure, making traits like speed and predator awareness (Sense) critical.
 
@@ -49,10 +61,21 @@ The final phase focused on implementing the personality-driven behaviors that wo
 ### Behavioral Genetics  
 I linked the inherited personality traits directly to the actors' decision-making logic within their state machine:
 
+<CodeSnippet
+    title="Actor AI State Machine (WOActor.cpp)"
+    language="cpp"
+    code={aiStateSnippet}
+/>
+
 * **Social vs. Solitary:** I made social actors exhibit flocking behavior by moving towards the center of mass of nearby actors, while solitary actors actively move away from others.  
 * **Brave vs. Cautious:** This gene determines an actor's flight distance from predators. Crucially, I programmed brave actors to attempt to rescue a captured teammate by charging the predator, which sometimes stuns it but also risks their own capture.  
 * **Generous vs. Selfish:** I designed generous actors with surplus energy and food to actively seek out and share resources with hungry actors nearby, a behavior that selfish actors never exhibit.
 
 ### GUI for Control and Observation  
 To make the simulation a useful tool for observation, I developed a comprehensive GUI using ImGui and ImPlot. This interface allows for real-time control over 40+ simulation parameters, from simulation speed to mutation rates to predator speed. It also includes a suite of plots that track the population's average physical and genetic traits over time, providing clear, quantitative data on the evolutionary trends emerging from the simulation's rules.  
-*The ImGui-based control panel and ImPlot graphs, showing real-time data on population size and the distribution of genetic traits like "Brave" vs. "Cautious."*
+
+<CodeSnippet
+    title="GUI & Data Plotting (EvolutionSimGUI.cpp)"
+    language="cpp"
+    code={guiPlotSnippet}
+/>
