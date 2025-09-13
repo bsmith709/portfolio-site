@@ -38,8 +38,8 @@
         };
 
         observer = new IntersectionObserver(observerCallback, {
-            // This creates a horizontal line in the middle of the viewport
-            rootMargin: '-50% 0px -50% 0px',
+            // This creates a horizontal line in the top of the viewport
+            rootMargin: '-5% 0px -95% 0px',
         });
 
         headings.forEach(heading => observer.observe(heading));
@@ -61,7 +61,7 @@
     </a>
 
     <div class="lg:grid lg:grid-cols-4 lg:gap-6">
-        <div class="lg:col-span-3">
+        <div class="lg:col-span-3 mb-15">
             <article bind:this={articleEl} class="prose lg:prose-lg prose-invert max-w-none">
                 <data.content/>
             </article>

@@ -146,4 +146,8 @@
     margin: 0;
     padding: 0;
   }
+
+  .prose h2, .prose h3 {
+    scroll-margin-top: var(--spacing-6);
+  }
 }
