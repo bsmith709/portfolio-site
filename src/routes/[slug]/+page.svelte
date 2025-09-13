@@ -53,15 +53,16 @@
     });
 </script>
 
-<div class="max-w-7xl mx-auto px-3 py-6">
-    <a href="/#projects" class="text-main-300 hover:text-main-100 mb-8 inline-flex items-center gap-2 font-semibold">
+
+<div class="max-w-7xl mx-auto mb-6">
+    <a href="/" class="text-main-300 hover:text-main-100 my-5 inline-flex items-center gap-2 font-semibold lg:text-2xl">
         <Icon name="arrow-left" class="w-4 h-4" />
-        Back to Projects
+        Back
     </a>
 
-    <div class="lg:grid lg:grid-cols-6 lg:gap-6">
-        <div class="lg:col-span-5">
-            <article bind:this={articleEl} class="prose prose-lg prose-invert max-w-none">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-6">
+        <div class="lg:col-span-3">
+            <article bind:this={articleEl} class="prose lg:prose-lg prose-invert max-w-none">
                 <data.content/>
             </article>
         </div>
