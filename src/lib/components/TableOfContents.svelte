@@ -46,7 +46,7 @@
 
 {#if links.length > 0}
     <nav class="sticky top-8 flex h-[calc(100vh-12rem)] flex-col">
-        <h2 class="flex-shrink-0 text-sm font-semibold uppercase tracking-wide text-neutral-400 mb-2">
+        <h2 class="flex-shrink-0 text-sm font-semibold uppercase tracking-wide text-main-100 mb-2 border-b border-main-100">
             On this page
         </h2>
 

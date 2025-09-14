@@ -8,6 +8,7 @@ githubUrl: 'https://github.com/bsmith709/portfolio-site'
     import ActionBar from "$lib/components/ActionBar.svelte";
     import Button from "$lib/components/Button.svelte";
     import CodeSnippet from "$lib/components/CodeSnippet.svelte";
+    import Icon from "$lib/components/Icon.svelte";
 
     import buttonSnippet from "$lib/components/Button.svelte?raw";
     import pageLoaderSnippet from '$lib/snippets/portfolio/page.ts?raw';
@@ -21,6 +22,7 @@ githubUrl: 'https://github.com/bsmith709/portfolio-site'
     {#snippet actions()}
         <a href="design-system" target="_blank" rel="noopener noreferrer">
 			<Button variant="primary" size="sm" class="lg:text-sm lg:gap-2">
+                <Icon name="link" class="w-4 h-4" />
 				<span>Design System</span>
 			</Button>
 		</a>

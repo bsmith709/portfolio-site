@@ -14,7 +14,7 @@
         {@render actions()}
     {/if}
 		<a href={githubUrl} target="_blank" rel="noopener noreferrer">
-			<Button variant="secondary" size="sm" class="lg:text-sm lg:gap-2">
+			<Button variant="primary" size="sm" class="lg:text-sm lg:gap-2">
 				<Icon name="github" class="w-4 h-4" />
 				<span>View on GitHub</span>
 			</Button>
