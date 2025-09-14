@@ -11,6 +11,10 @@
     let scrollContainer = $state<HTMLElement | undefined>(undefined);
     let linkElements = $state<HTMLAnchorElement[]>([]);
 
+    // --- Logic to find the first H2 heading ---
+    // This will give us the index of the first level 2 link, or -1 if none exist.
+    let firstH2Index = $derived(links.findIndex(link => link.level === 2));
+
     $effect(() => {
        if (activeId) {
             // 2. Find the index of the active link in your data.
@@ -33,7 +37,7 @@
 
     // Contains ONLY layout and font-size styles for each level
     const levelLayoutClasses: Record<number, string> = {
-        2: 'mt-6 text-sm xl:text-base',
+        2: 'mt-2 text-sm xl:text-base',
         3: 'pl-4 text-xs xl:text-sm',
     };
 
@@ -60,6 +64,7 @@
                         class:text-main-300={link.id === activeId}
                         class:font-semibold={link.id === activeId}
                         class:{levelDefaultColorClasses[link.level]}={link.id !== activeId}
+                        class:mt-6={link.level === 2 && i > firstH2Index && firstH2Index !== -1}
                     >
                         {link.text}
                     </a>
