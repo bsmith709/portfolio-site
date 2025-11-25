@@ -11,10 +11,10 @@
 
 <div class="grid grid-cols-1 gap-y-6">
     <Card 
-        image={melBandsImage}
-        title="Machine Learning on Edge Devices" 
-        description="A self-contained system that runs a quantized respiratory disease model on a Google Coral Edge TPU, capable of performing real-time audio analysis for health monitoring." 
-        tags={['Python', 'C++', 'TensorFlow', 'TFLite', 'Google Coral', 'ESP32', 'Raspberry Pi Pico', '3D Printing']}
+        date="Feb 2022 — Aug 2024"
+        title="Founder & Lead Engineer · Independent E-Commerce & Hardware Venture" 
+        description="Bootstrapped a consumer electronics refurbishment operation to $100k+ lifetime revenue with a ~24% net profit margin, optimizing unit economics by negotiating direct wholesale procurement with Japanese vendors at 20% below market rate." 
+        tags={['Business Strategy', 'Supply Chain Management', 'Customer Service', 'Marketing', 'Electronics Refurbishment']}
     >
     </Card>
 </div>

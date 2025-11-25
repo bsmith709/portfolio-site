@@ -16,11 +16,9 @@
             <About />
         </section>
 
-        <!--- Experience section not yet ready
         <section id="experience" class="mb-8">
             <Experience />
         </section>
-        -->
 
         <section id="projects" class="mb-8">
             <Projects />

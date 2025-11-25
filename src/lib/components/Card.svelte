@@ -4,6 +4,7 @@
     // ... your script block remains the same
     const {
         class: extraClasses = '',
+        date = '',
         link = '',
         image = '',
         title = '',
@@ -13,6 +14,7 @@
         ...restProps
     } = $props<{
         class?: string;
+        date?: string;
         link?: string;
         image?: string;
         title?: string;
@@ -41,9 +43,11 @@
                         {#if title}
                             <h3 class="text-lg @xl:text-xl @4xl:text-2xl font-semibold text-gradient-main mr-2 pb-0!">{title}</h3>
                         {/if}
-                        
                         <Icon name="arrow-up-right" class="w-4 h-4 text-neutral-300 group-hover:text-main-200 group-hover:-translate-y-1 transition-all" />
                     </div>
+                    {#if date}
+                        <p class="text-sm text-neutral-400 mb-2 w-full xl:text-base">{date}</p>
+                    {/if}
 
                     {#if description}
                         <p class="text-neutral-200 text-lg @xl:text-lg @4xl:text-lg text-neutral-100 mb-2 flex-grow">{description}</p>

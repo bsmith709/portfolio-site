@@ -13,9 +13,9 @@
 
 <div class="flex items-center justify-center mt-4 sm:mt-6">
     <a href="mailto:blakesmithdev@outlook.com">
-        <Button variant="primary" size="md">
+        <Button variant="primary" size="sm" class="sm:h-7 sm:px-4 sm:text-base sm:gap-2">
             <span>Get In Touch</span>
-            <Icon name="arrow-right" class="w-4 h-4" />
+            <Icon name="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4" />
         </Button>
     </a>
 </div>

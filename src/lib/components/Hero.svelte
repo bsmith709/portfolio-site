@@ -18,7 +18,7 @@
         </span>
     </div>
 
-    <div class="flex justify-between items-center mt-6 mr-2 lg:mt-9">
+    <div class="flex justify-between items-center mt-6 mr-2 lg:mt-7">
         <ul class="flex items-center gap-2 sm:gap-4">
             <li>
                 <a href="https://github.com/bsmith709" aria-label="View my GitHub profile"><Button variant="link" size="icon" class="w-6 h-6 sm:w-7 sm:h-7"><Icon name="github"/></Button></a>
