@@ -6,19 +6,19 @@
     <header>
         <h1 class="text-gradient-main text-5xl font-bold inline">Blake Smith</h1>
         <h2 class="text-2xl text-gradient-secondary mt-1 font-semibold sm:text-3xl">Software Engineer</h2>
-        <h3 class="text-lg text-neutral-100 -mt-2 sm:text-xl">Machine Learning | Embedded Systems | Full Stack</h3>
+        <h3 class="text-lg text-neutral-100 -mt-2 sm:text-xl">Full Stack | Machine Learning | Embedded Systems</h3>
     </header>
 
     <div>
         <p class="mt-4 text-neutral-200 sm:text-lg leading-relaxed">
-            I’m a motivated builder with a passion for engineering simple solutions to complex problems. From architecting AI simulations in C++ to deploying Machine Learning models in constrained environments, I thrive on solving challenging problems.
+            I’m a motivated builder with a passion for engineering simple solutions to complex problems.
         </p>
         <span class="text-sm mt-1 text-neutral-300 block leading-tight sm:text-base sm:leading-normal">
             Senior at Ohio University, graduating December 2025 with a B.S. in Computer Science (GPA 3.8+).
         </span>
     </div>
 
-    <div class="flex justify-between items-center mt-6 mr-2 lg:mt-9 xl:mt-11">
+    <div class="flex justify-between items-center mt-6 mr-2 lg:mt-9">
         <ul class="flex items-center gap-2 sm:gap-4">
             <li>
                 <a href="https://github.com/bsmith709" aria-label="View my GitHub profile"><Button variant="link" size="icon" class="w-6 h-6 sm:w-7 sm:h-7"><Icon name="github"/></Button></a>
