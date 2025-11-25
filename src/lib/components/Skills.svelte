@@ -2,104 +2,104 @@
     <h4 class="text-main-100 font-semibold uppercase tracking-wide">Skills</h4>
 </header>
 
-<div class="border border-neutral-600 rounded-lg p-4">
+<div class="border-t-2 border-transparent hover:border-neutral-700 hover:bg-neutral-800 transition-all hover:shadow-lg bg-neutral-800/50 rounded-lg p-4">
     <h5 class="font-semibold text-xl text-center text-gradient-main">Languages</h5>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">C/C++</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Python</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">TypeScript</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">CSS & HTML</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">OCaml</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">C/C++</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Python</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">TypeScript</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">CSS & HTML</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">OCaml</span>
 
     </div>
 </div>
 
-<div class="border border-neutral-600 rounded-lg p-4 mt-6">
+<div class="border-t-2 border-transparent hover:border-neutral-700 hover:bg-neutral-800 transition-all hover:shadow-lg bg-neutral-800/50 rounded-lg p-4 mt-6">
     <h5 class="font-semibold text-xl text-center text-gradient-main">Machine Learning & AI</h5>
-    <h6 class="text-center text-neutral-300 mt-1">Frameworks</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-1">Frameworks</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">PyTorch</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">TensorFlow</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">TFLite for Microcontrollers</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">PyTorch</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">TensorFlow</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">TFLite for Microcontrollers</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">Concepts</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">Concepts</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">CNN Architecture</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Model Optimization</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Feature Engineering</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Data Augmentation</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Genetic Algorithms</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">AI State Machines</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">CNN Architecture</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Model Optimization</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Feature Engineering</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Data Augmentation</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Genetic Algorithms</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">AI State Machines</span>
     </div>
 </div>
 
-<div class="border border-neutral-600 rounded-lg p-4 mt-6">
+<div class="border-t-2 border-transparent hover:border-neutral-700 hover:bg-neutral-800 transition-all hover:shadow-lg bg-neutral-800/50 rounded-lg p-4 mt-6">
     <h5 class="font-semibold text-xl text-center text-gradient-main">Hardware & Embedded Systems</h5>
-    <h6 class="text-center text-neutral-300 mt-1">Platforms</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-1">Platforms</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Google Coral Edge TPU</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">ESP32</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Raspberry Pi Pico</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Arduino</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Google Coral Edge TPU</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">ESP32</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Raspberry Pi Pico</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Arduino</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">Concepts</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">Concepts</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Micropython</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Hardware Integration</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Real-Time Processing</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Micropython</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Hardware Integration</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Real-Time Processing</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">Protocols</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">Protocols</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">I2C</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">SPI</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">UART</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">PWM</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">ADC/DAC</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">I2C</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">SPI</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">UART</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">PWM</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">ADC/DAC</span>
     </div>
 </div>
 
-<div class="border border-neutral-600 rounded-lg p-4 mt-6">
+<div class="border-t-2 border-transparent hover:border-neutral-700 hover:bg-neutral-800 transition-all hover:shadow-lg bg-neutral-800/50 rounded-lg p-4 mt-6">
     <h5 class="font-semibold text-xl text-center text-gradient-main">Web & Application Development</h5>
-    <h6 class="text-center text-neutral-300 mt-1">Frameworks</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-1">Frameworks</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">SvelteKit</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">PyGame</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">SvelteKit</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">PyGame</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">Styling</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">Styling</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Tailwind CSS</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Component-Based Design</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Systemic Design</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Tailwind CSS</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Component-Based Design</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Systemic Design</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">GUI Development</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">GUI Development</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">ImGui</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">ImPlot</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">ImGui</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">ImPlot</span>
     </div>
 </div>
 
-<div class="border border-neutral-600 rounded-lg p-4 mt-6">
+<div class="border-t-2 border-transparent hover:border-neutral-700 hover:bg-neutral-800 transition-all hover:shadow-lg bg-neutral-800/50 rounded-lg p-4 mt-6">
     <h5 class="font-semibold text-xl text-center text-gradient-main">Developer Tools & Platforms</h5>
-    <h6 class="text-center text-neutral-300 mt-1">Version Control</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-1">Version Control</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Git</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">GitHub</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Git</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">GitHub</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">Build & Automation</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">Build & Automation</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">CMake</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Makefile</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Doxygen</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">CMake</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Makefile</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Doxygen</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">Testing & Debugging</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">Testing & Debugging</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Catch2</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Valgrind</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Cppcheck</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Catch2</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Valgrind</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Cppcheck</span>
     </div>
-    <h6 class="text-center text-neutral-300 mt-2">Methodologies</h6>
+    <h6 class="text-center text-secondary-100 text-lg mt-2">Methodologies</h6>
     <div class="flex flex-wrap gap-2 items-center justify-center mt-2 text-sm sm:text-base">
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Agile Workflow</span>
-        <span class="bg-neutral-700 text-main-100 px-3 py-1 rounded-full">Sprint-Based Planning</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Agile Workflow</span>
+        <span class="bg-main-100/10 text-main-100 px-3 py-1 rounded-full">Sprint-Based Planning</span>
     </div>
 </div>
