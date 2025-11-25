@@ -13,7 +13,7 @@
             <span class="font-semibold uppercase">Home</span>
         </a>
     </header>
-    <header class="pb-4 flex items-center gap-4 border-b border-main-100 text-5xl font-extrabold tracking-wide text-white">All Projects</header>
+    <header class="pb-4 flex items-center gap-4 border-b border-main-100 text-4xl xl:text-5xl font-extrabold tracking-wide text-white">All Projects</header>
     <ul class="grid grid-cols-1 gap-y-4 group/list transition-all mt-6">
         <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <Card 
