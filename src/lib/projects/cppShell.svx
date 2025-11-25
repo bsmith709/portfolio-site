@@ -1,0 +1,31 @@
+---
+title: 'Advanced C++ Shell'
+description: 'A valgrind-clean POSIX-like shell and interpreter written in C/++, Flex, and Bison. Features a standard fork/exec loop, a full parser that builds an Abstract Syntax Tree (AST), and support for control structures that turn it into a Turing-complete language.'
+---
+
+<script lang="ts">
+    import ActionBar from "$lib/components/ActionBar.svelte";
+    import Button from "$lib/components/Button.svelte";
+    import CodeSnippet from "$lib/components/CodeSnippet.svelte";
+    import Icon from "$lib/components/Icon.svelte";
+</script>
+
+
+# **Advanced C++ Shell**
+
+<ActionBar>	</ActionBar>
+
+## **Project Overview**
+
+This project started as an assignment for CS4420: Operating Systems, requiring students to produce a standard pipe/fork/exec shell and command line interpreter with variable assignments.
+I enjoyed the project so much that I decided to enhance it much further, adding support for:
+- `while` and `for <var> in` loops (single/multiline)
+- `if`/`then`/`else`/`elif`/`fi` conditionals (single/multiline)
+- Arithmetic expansion `$((expr))`/`VAR=$((expr))` using dedicated recursive descent parser (Supports +,-,/,*,(),unary - operations on variables and numbers)
+- Aliasing builtins `alias [match replacement]`/`alias <alias_name>`/`alias`/`unalias [-a] name [name ...]` with cycle detection
+- Line continuation with \ (Uses PS2 or keyword if in a condition/loop)
+- Readline support for command history with built in `history` command
+- `exit`/`exit code` builtin with history saving
+- Dedicated test suite for all of these features with valgrind integration 
+
+I meticulously plugged every single memory leak reported by valgrind, ensuring excellent long term performance.

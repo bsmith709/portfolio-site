@@ -21,3 +21,6 @@
 		</a>
 	</div>
 {/if}
+{#if !githubUrl}
+	<div class="-mt-6 pb-2 border-b border-main-100"></div>
+{/if}

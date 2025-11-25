@@ -2,7 +2,6 @@
     import Card from '$lib/components/Card.svelte';
     import melBandsImage from '$lib/assets/256MelBands.png';
     import evoSimImage from '$lib/assets/EvoSim.png';
-    import portfolioImage from '$lib/assets/Portfolio.png';
 	import Icon from './Icon.svelte';
 </script>
 
@@ -40,11 +39,10 @@
 
     <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
         <Card 
-            link="portfolio"
-            image={portfolioImage}
-            title="Personal Portfolio & Design System" 
-            description="A fully responsive personal portfolio built from scratch with SvelteKit, TypeScript, and Tailwind CSS. It features a modular, component-based architecture and includes a self-documented design system for consistent maintainable expansion." 
-            tags={['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Component Design']}
+            link="cppShell"
+            title="Advanced C++ Shell" 
+            description="A valgrind-clean POSIX-like shell and interpreter written in C/++, Flex, and Bison. Features a standard fork/exec loop, a full parser that builds an Abstract Syntax Tree (AST), and support for control structures that turn it into a Turing-complete language." 
+            tags={['C++', 'C', 'Flex', 'Bison']}
         >
         </Card>
     </li>

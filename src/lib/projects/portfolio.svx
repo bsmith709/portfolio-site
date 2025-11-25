@@ -1,6 +1,6 @@
 ---
-title: 'Machine Learning on Edge Devices'
-description: 'A self-contained system that runs a quantized respiratory disease model on a Google Coral Edge TPU, capable of performing real-time audio analysis for health monitoring.'
+title: 'Personal Portfolio & Design System'
+description: 'A fully responsive personal portfolio built from scratch with SvelteKit, TypeScript, and Tailwind CSS. It features a modular, component-based architecture and includes a self-documented design system for consistent maintainable expansion.'
 githubUrl: 'https://github.com/bsmith709/portfolio-site'
 ---
 
