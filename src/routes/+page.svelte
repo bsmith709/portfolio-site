@@ -7,25 +7,23 @@
 	import Skills from '$lib/components/Skills.svelte';
     import Contact from '$lib/components/Contact.svelte';
 </script>
-<div class="min-h-screen w-full  max-w-7xl mx-auto px-5 py-7 lg:grid lg:grid-cols-2 lg:grid-cols-[1fr_1.5fr] lg:gap-8 lg:py-0 lg:px-7 xl:gap-10">
+<div class="min-h-screen w-full  max-w-7xl mx-auto px-5 py-7 lg:grid lg:grid-cols-2 lg:grid-cols-[1fr_1.5fr] lg:gap-8 lg:py-0 lg:px-7 xl:gap-9">
     <header id="hero" class="mb-9 lg:mb-0 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-full lg:flex-col lg:justify-between lg:py-9">
         <Hero />
     </header>
-    <main>
-        <section id="about" class="mb-8 lg:mt-4 xl:mt-8">
+    <main class="lg:mt-8">
+        <section id="about" class="mb-8">
             <About />
         </section>
 
+        <!--- Experience section not yet ready
         <section id="experience" class="mb-8">
             <Experience />
         </section>
+        -->
 
         <section id="projects" class="mb-8">
             <Projects />
-        </section>
-
-        <section id="skills" class="mb-8">
-            <Skills />
         </section>
 
         <section id="contact" class="mb-8">
