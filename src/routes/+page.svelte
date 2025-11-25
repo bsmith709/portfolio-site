@@ -4,7 +4,6 @@
     import About from '$lib/components/About.svelte';
     import Experience from '$lib/components/Experience.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import Skills from '$lib/components/Skills.svelte';
     import Contact from '$lib/components/Contact.svelte';
 </script>
 <div class="min-h-screen w-full  max-w-7xl mx-auto py-7 lg:grid lg:grid-cols-2 lg:grid-cols-[1fr_1.5fr] lg:gap-8 lg:py-0 xl:gap-10">

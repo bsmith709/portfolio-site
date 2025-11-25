@@ -1,17 +1,21 @@
 <script lang="ts">
     import Card from '$lib/components/Card.svelte';
-    import Icon from '$lib/components/Icon.svelte';
-    import Button from '$lib/components/Button.svelte';
     import melBandsImage from '$lib/assets/256MelBands.png';
     import evoSimImage from '$lib/assets/EvoSim.png';
     import portfolioImage from '$lib/assets/Portfolio.png';
+	import Icon from './Icon.svelte';
 </script>
 
-<header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 sm:text-lg">
+<header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 sm:text-lg flex justify-between">
     <h4 class="text-main-100 font-semibold uppercase tracking-wide">Projects</h4>
+    <a href="all-projects">
+        <div class="text-neutral-300 font-semibold uppercase tracking-wide hover:text-main-100 transition-all group flex gap-2 items-baseline">
+            <span>View All</span> <Icon name="link" class="w-4 h-4 text-neutral-300 group-hover:-translate-y-1 group-hover:text-main-100 transition-all" />
+        </div>
+    </a>
 </header>
 
-<ul class="grid grid-cols-1 gap-y-6 group/list transition-all">
+<ul class="grid grid-cols-1 gap-y-4 group/list transition-all">
     <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
         <Card 
             link="edgeML"
