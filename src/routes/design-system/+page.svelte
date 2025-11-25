@@ -344,7 +344,7 @@
       <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-main-100 mb-4">Cards</h3>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
         <Card 
-          image={melBandsImage}
+          date="Date — Date"
           title="Card Title" 
           description="This is a description for the card component. It provides additional context about the card's content." 
           tags={['Tag1', 'Tag2', 'Tag3']}
