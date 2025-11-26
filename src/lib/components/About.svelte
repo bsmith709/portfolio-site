@@ -1,6 +1,6 @@
 
-<header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 sm:text-lg">
-    <h4 class="text-gradient-main font-semibold uppercase tracking-wide w-fit whitespace-nowrap">About Me</h4>
+<header class="sticky top-0 z-10 -mx-6 px-6 py-4 backdrop-blur bg-neutral-900/75 sm:text-lg">
+    <h4 class="text-gradient-main font-semibold uppercase tracking-wide w-fit whitespace-nowrap translate-y-0.75" >About Me</h4>
 </header>
 
 <p class="text-neutral-200 leading-relaxed mb-4 sm:text-lg">
