@@ -41,9 +41,9 @@
                 <div class="flex flex-col flex-grow">
                     <div class="flex justify-between items-baseline mb-1">
                         {#if title}
-                            <h3 class="text-lg @xl:text-xl @4xl:text-2xl font-semibold text-gradient-main mr-2 pb-0!">{title}</h3>
+                            <h3 class="text-lg @xl:text-xl @4xl:text-2xl font-semibold text-main-200 mr-2 pb-0!">{title}</h3>
                         {/if}
-                        <Icon name="arrow-up-right" class="w-4 h-4 text-neutral-300 group-hover:text-main-200 group-hover:-translate-y-1 transition-all" />
+                        <Icon name="arrow-up-right" class="w-4 h-4 text-neutral-300 group-hover:text-main-200 group-hover:-translate-y-1 transition-all w-[5%]" />
                     </div>
                     {#if date}
                         <p class="text-sm text-neutral-400 mb-2 w-full xl:text-base">{date}</p>

@@ -55,21 +55,27 @@
 
 
 <div class="max-w-7xl mx-5 mb-6 lg:mx-6 xl:mx-auto">
-    <div class="w-full backdrop-blur bg-neutral-900/75 text-main-300 py-5 font-semibold sm:text-lg lg:text-xl lg:sticky lg:top-0 lg:-mx-10 lg:px-10">
-        <a href="/" class="inline-flex items-center gap-2 hover:text-main-100">
-            <Icon name="arrow-left" class="w-3 h-3 sm:w-4 sm:h-4" />
-            <span class="font-semibold uppercase">Home</span>
-        </a>
-    </div>
-
+    
     <div class="lg:grid lg:grid-cols-4 lg:gap-8 xl:gap-6">
+        
         <div class="lg:col-span-3 lg:mb-15">
+            
+            <div class="sticky top-0 z-50 -mx-5 px-5 lg:-ml-10 lg:pl-10 py-5 backdrop-blur bg-neutral-900/75 text-main-300 font-semibold sm:text-lg lg:text-xl transition-all">
+                <a href="/" class="inline-flex items-center gap-2 hover:text-main-100">
+                    <Icon name="arrow-left" class="w-3 h-3 sm:w-4 sm:h-4" />
+                    <span class="font-semibold uppercase">Home</span>
+                </a>
+            </div>
+
             <article bind:this={articleEl} class="prose xl:prose-lg prose-invert max-w-none">
                 <data.content/>
             </article>
         </div>
+
         <div class="hidden lg:block lg:col-span-1">
-            <TableOfContents {links} {activeId} />
+            <div class="sticky top-8">
+                <TableOfContents {links} {activeId} />
+            </div>
         </div>
     </div>
 </div>

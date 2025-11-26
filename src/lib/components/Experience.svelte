@@ -6,7 +6,7 @@
 </script>
 
 <header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 sm:text-lg">
-    <h4 class="text-main-100 font-semibold uppercase tracking-wide">Experience</h4>
+    <h4 class="text-gradient-main font-semibold uppercase tracking-wide w-fit">Experience</h4>
 </header>
 
 <div class="grid grid-cols-1 gap-y-6">

@@ -7,7 +7,7 @@
 </script>
 
 <header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 flex justify-between">
-    <h4 class="text-main-100 font-semibold uppercase tracking-wide sm:text-lg">Projects</h4>
+    <h4 class="text-gradient-main font-semibold uppercase tracking-wide w-fit sm:text-lg">Projects</h4>
     <a href="all-projects">
         <div class="text-neutral-300 text-sm sm:text-base font-semibold uppercase tracking-wide hover:text-main-100 transition-all group flex gap-2 items-baseline">
             <span>View All</span> <Icon name="link" class="w-4 h-4 text-neutral-300 group-hover:-translate-y-1 group-hover:text-main-100 transition-all" />
