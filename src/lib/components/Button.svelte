@@ -5,13 +5,13 @@
    */
 
   // Define the types for the component's props for strong type safety.
-  type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link' | string;
+  type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link' | 'custom' | string;
   type Size = 'sm' | 'md' | 'lg' | 'icon' | 'custom' | string;
   type ButtonType = 'button' | 'submit' | 'reset';
 
   // Use Svelte 5's $props() rune for declaring component properties.
   const {
-    variant = 'primary' as Variant,
+    variant = 'custom' as Variant,
     size = 'custom' as Size,
     type = 'button' as ButtonType,
     disabled = false,
@@ -44,6 +44,7 @@
     outline: 'border border-neutral-400 text-neutral-400 bg-transparent hover:bg-neutral-400 hover:border-neutral-400 hover:text-neutral-900 active:bg-neutral-500 active:border-neutral-500 active:text-neutral-900',
     ghost: 'text-neutral-400 hover:bg-neutral-700 hover:text-neutral-100 active:bg-neutral-800 active:text-neutral-500',
     link: 'text-neutral-100 underline-offset-4 hover:text-main-300 hover:underline gap-0',
+    custom: '', // No predefined classes; user must provide their own via `class` prop
   };
 
   // Classes for different button sizes.

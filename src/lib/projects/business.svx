@@ -1,0 +1,178 @@
+---
+title: 'Independent E-Commerce & Hardware Venture'
+description: 'Bootstrapped a consumer electronics refurbishment operation to $100k+ lifetime revenue with a ~24% net profit margin, optimizing unit economics by negotiating direct wholesale procurement with Japanese vendors at 20% below market rate.'
+---
+
+<script lang="ts">
+    import ActionBar from "$lib/components/ActionBar.svelte";
+    import Button from "$lib/components/Button.svelte";
+    import CodeSnippet from "$lib/components/CodeSnippet.svelte";
+    import Icon from "$lib/components/Icon.svelte";
+    import Carousel from "$lib/components/Carousel.svelte";
+
+    import pikachu3DS from "$lib/assets/business/pikachuN3DS.jpg";
+    import zelda3DS from "$lib/assets/business/zelda3DS.jpg";
+    import pokemon3DS from "$lib/assets/business/pokemonXY3DS.jpg";
+    import main3DS from "$lib/assets/business/maincolors3DS.jpg";
+    import bulbasaurGBA from "$lib/assets/business/bulbasaurGBA.jpg";
+    import charmanderGBA from "$lib/assets/business/charmanderGBA.jpg";
+    import kirbyGBA from "$lib/assets/business/kirbyGBA.jpg";
+    import zeldaGBA from "$lib/assets/business/zeldaGBA.jpg";
+    import warioGBA from "$lib/assets/business/warioGBA.jpg";
+    import gengarGBA from "$lib/assets/business/gengarGBA.jpg";
+    import pikachuGBASPtop from "$lib/assets/business/pikachuGBASPtop.jpg";
+    import pikachuGBASP from "$lib/assets/business/pikachuGBASP.jpg";
+    import blueGBASPopen from "$lib/assets/business/blueGBASPopen.jpg";
+    import blueGBASPback from "$lib/assets/business/blueGBASPback.jpg";
+    import gcPicoImg from "$lib/assets/business/gamecubePicoInstallation.jpg";
+    import wiringImg from "$lib/assets/business/picoWiring.jpg";
+
+    const projectImages = [
+        { 
+            src: pikachu3DS, 
+            alt: "Refurbished New Nintendo 3DS LL with Pikachu Shell" 
+        },
+        { 
+            src: zelda3DS, 
+            alt: "Refurbished New Nintendo 3DS LL with Zelda Shell" 
+        },
+        { 
+            src: pokemon3DS, 
+            alt: "Refurbished New Nintendo 3DS LL with Pokemon X/Y Shell" 
+        },
+        { 
+            src: main3DS, 
+            alt: "Main Colors of Japanese 3DS LL" 
+        },
+        { 
+            src: bulbasaurGBA, 
+            alt: "Refurbished Gameboy Advance with IPS Screen and Bulbasaur Shell" 
+        },
+        { 
+            src: charmanderGBA, 
+            alt: "Refurbished Gameboy Advance with IPS Screen and Charmander Shell" 
+        },
+        { 
+            src: kirbyGBA, 
+            alt: "Refurbished Gameboy Advance with IPS Screen and Kirby Shell" 
+        },
+        { 
+            src: zeldaGBA, 
+            alt: "Refurbished Gameboy Advance with IPS Screen and Zelda Shell" 
+        },
+        { 
+            src: warioGBA, 
+            alt: "Refurbished Gameboy Advance with IPS Screen and Wario Shell" 
+        },
+        { 
+            src: gengarGBA, 
+            alt: "Refurbished Gameboy Advance with IPS Screen and Gengar Shell" 
+        },
+        { 
+            src: pikachuGBASPtop, 
+            alt: "Top View of Refurbished Pikachu Gameboy Advance SP with IPS Screen" 
+        },
+        { 
+            src: pikachuGBASP, 
+            alt: "Refurbished Pikachu Gameboy Advance SP with IPS Screen" 
+        },
+        { 
+            src: blueGBASPopen, 
+            alt: "Refurbished Blue Gameboy Advance SP with IPS Screen (Open)" 
+        },
+        { 
+            src: blueGBASPback, 
+            alt: "Refurbished Blue Gameboy Advance SP with IPS Screen (Back)" 
+        },
+        {
+            src: gcPicoImg, 
+            alt: "GameCube with PicoBoot Modchip Installed"
+        },
+        {
+            src: wiringImg, 
+            alt: "Pico Wiring Closeup"
+        }
+    ];
+</script>
+
+# **Independent E-Commerce & Hardware Venture**
+
+<ActionBar />
+
+## **Overview**
+I built this venture to fund my education and technical development, scaling it from a high school resale hobby into a specialized electronics business.
+The business evolved in distinct stages: initially identifying market inefficiencies in collectibles, then pivoting to component-level hardware repair and software modding, and finally establishing an international supply chain for Japanese handheld consoles.
+
+By 2024, the business reached a peak annual revenue of ~$72k ($100k+ lifetime) with a profit margin of ~24%. 
+It served as a practical application of my technical skills, ranging from microsoldering to firmware modification, and provided a hands-on introduction to supply chain management and unit economics before I exited in August 2024 to focus fully on my Computer Science degree.
+
+![Etsy Q2-Q3 2024 Revenue Growth](images/EtsyGrowth.png)    
+
+## **Phase 1: Market Arbitrage and Capital Accumulation**
+The initial phase (Feb 2022) focused on identifying undervalued assets to build the capital necessary for technical equipment.
+
+### **High-Volume Asset Sorting**
+
+As a high school senior, I identified a market inefficiency in "Skylanders" game figures. 
+Large, unsorted lots were often undervalued relative to the individual rarity of specific characters contained within them. 
+I researched the values of each character and developed a strong intuition for quickly valuing these lots, purchasing them, and decoupling the rare assets for individual sale while repackaging the rest into custom lots.
+
+<div class="grid grid-cols-2 gap-4">
+    <img 
+        src="/images/skylandersBin.jpg" 
+        alt="Skylanders Collection Example 1" 
+        class="rounded-lg border border-neutral-800 aspect-square"
+    />
+    <img 
+        src="/images/skylandersBin2.jpg" 
+        alt="Skylanders Collection Example 2" 
+        class="rounded-lg border border-neutral-800 aspect-square"
+    />
+</div>
+
+### **Bootstrapping Technical Infrastructure**
+
+This initial arbitrage phase generated approximately $10k in first-year revenue. 
+Rather than taking this as profit, I treated it as seed funding. 
+I reinvested the capital to purchase a professional soldering station, a hot air rework station, and a suite of diagnostic tools. 
+This hardware investment allowed me to pivot from simple resale to value-add engineering.
+
+## **Phase 2: Hardware Restoration and Firmware Engineering**
+Post-graduation, I utilized my new lab equipment to enter the repair market, eventually finding a niche in the Nintendo 3DS ecosystem.
+
+### **Component-Level Repair**
+
+I began purchasing non-functional and semi-functional devices to refurbish. 
+Using hot air rework and microsoldering techniques, I repaired broken traces, replaced damaged ports, and swapped failing components. 
+This process gave me a functional familiarity with consumer electronics design and troubleshooting common hardware failure points.
+
+### **Firmware Modification (CFW)**
+
+I identified a high demand for "unlocked" hardware. 
+I specialized in installing Custom Firmware (CFW) on Nintendo 3DS consoles. 
+This process involved exploiting software vulnerabilities to bypass the manufacturer's signed code restrictions, allowing users to run homebrew software and back up their physical media. 
+I effectively converted standard hardware into open-platform devices, significantly increasing their market value.
+
+## **Phase 3: International Supply Chain and Advanced Modding**
+The final phase involved optimizing the supply chain and expanding into hardware modifications.
+
+### **Global Sourcing & Region Swapping**
+
+I analyzed the global market and discovered that Japanese 3DS consoles traded at a significant discount compared to North American units. 
+I developed a process to import Japanese consoles and perform a "Region Swap", a software procedure that changes the console's firmware to US, allowing it to display English menus and play games from any region.
+
+To stabilize this supply chain, I negotiated a wholesale agreement with a Japanese vendor, securing bulk shipments of high-quality units at ~20% below market rate.
+
+### **Advanced Hardware Modifications**
+
+In addition to the 3DS workflow, I expanded my technical offerings to include hardware mods for other systems such as:
+
+- **Console Reshells:** Migrating internals to high-quality special edition housings.
+
+- **GBA IPS Upgrades:** Modifying Gameboy Advance consoles to support modern, high-backlight IPS screens and custom shells.
+
+- **GameCube PicoBoot:** Soldering Raspberry Pi Pico microcontrollers directly to the GameCube motherboard (via the IPL injection method) to bypass the optical drive and load software from SD cards.
+
+<div class="my-8">
+    <Carousel images={projectImages} />
+</div>

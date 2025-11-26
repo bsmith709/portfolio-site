@@ -50,7 +50,7 @@
                     {/if}
 
                     {#if description}
-                        <p class="text-neutral-200 text-lg @xl:text-lg @4xl:text-lg text-neutral-100 mb-2 flex-grow">{description}</p>
+                        <p class="text-neutral-200 text-base @xl:text-lg @4xl:text-lg text-neutral-100 mb-2 flex-grow">{description}</p>
                     {/if}
                     {#if tags.length > 0}
                         <div class="flex flex-wrap gap-2 mb-4 @xl:mb-0">

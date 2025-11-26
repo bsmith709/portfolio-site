@@ -2,13 +2,14 @@
     import Card from '$lib/components/Card.svelte';
     import melBandsImage from '$lib/assets/256MelBands.png';
     import evoSimImage from '$lib/assets/EvoSim.png';
+    import portfolioImage from '$lib/assets/Portfolio.png';
 	import Icon from './Icon.svelte';
 </script>
 
-<header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 sm:text-lg flex justify-between">
-    <h4 class="text-main-100 font-semibold uppercase tracking-wide">Projects</h4>
+<header class="sticky top-0 z-10 -mx-6 px-6 py-4 mb-4 backdrop-blur bg-neutral-900/75 flex justify-between">
+    <h4 class="text-main-100 font-semibold uppercase tracking-wide sm:text-lg">Projects</h4>
     <a href="all-projects">
-        <div class="text-neutral-300 font-semibold uppercase tracking-wide hover:text-main-100 transition-all group flex gap-2 items-baseline">
+        <div class="text-neutral-300 text-sm sm:text-base font-semibold uppercase tracking-wide hover:text-main-100 transition-all group flex gap-2 items-baseline">
             <span>View All</span> <Icon name="link" class="w-4 h-4 text-neutral-300 group-hover:-translate-y-1 group-hover:text-main-100 transition-all" />
         </div>
     </a>
@@ -39,11 +40,24 @@
 
     <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
         <Card 
-            link="cppShell"
-            title="Advanced C++ Shell" 
-            description="A valgrind-clean POSIX-like shell and interpreter written in C/++, Flex, and Bison. Features a standard fork/exec loop, a full parser that builds an Abstract Syntax Tree (AST), and support for control structures that turn it into a Turing-complete language." 
-            tags={['C++', 'C', 'Flex', 'Bison']}
+            link="portfolio"
+            image={portfolioImage}
+            title="Personal Portfolio & Design System" 
+            description="A fully responsive personal portfolio built from scratch with SvelteKit, TypeScript, and Tailwind CSS. It features a modular, component-based architecture and includes a self-documented design system for consistent maintainable expansion." 
+            tags={['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Component Design']}
         >
         </Card>
     </li>
+
+    <!--- Comment out shell project card for now.
+        <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <Card 
+                link="cppShell"
+                title="Advanced C++ Shell" 
+                description="A valgrind-clean POSIX-like shell and interpreter written in C/++, Flex, and Bison. Features a standard fork/exec loop, a full parser that builds an Abstract Syntax Tree (AST), and support for control structures that turn it into a Turing-complete language." 
+                tags={['C++', 'C', 'Flex', 'Bison']}
+            >
+            </Card>
+        </li>
+    -->
 </ul>

@@ -10,7 +10,8 @@
 </header>
 
 <div class="grid grid-cols-1 gap-y-6">
-    <Card 
+    <Card
+        link="business"
         date="Feb 2022 — Aug 2024"
         title="Founder & Lead Engineer · Independent E-Commerce & Hardware Venture" 
         description="Bootstrapped a consumer electronics refurbishment operation to $100k+ lifetime revenue with a ~24% net profit margin, optimizing unit economics by negotiating direct wholesale procurement with Japanese vendors at 20% below market rate." 

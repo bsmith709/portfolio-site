@@ -37,15 +37,17 @@
             </Card>
         </li>
 
-        <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-            <Card 
-                link="cppShell"
-                title="Advanced C++ Shell" 
-                description="A valgrind-clean POSIX-like shell and interpreter written in C/++, Flex, and Bison. Features a standard fork/exec loop, a full parser that builds an Abstract Syntax Tree (AST), and support for control structures that turn it into a Turing-complete language." 
-                tags={['C++', 'C', 'Flex', 'Bison']}
-            >
-            </Card>
-        </li>
+        <!--- Comment out shell project card for now.
+            <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                <Card 
+                    link="cppShell"
+                    title="Advanced C++ Shell" 
+                    description="A valgrind-clean POSIX-like shell and interpreter written in C/++, Flex, and Bison. Features a standard fork/exec loop, a full parser that builds an Abstract Syntax Tree (AST), and support for control structures that turn it into a Turing-complete language." 
+                    tags={['C++', 'C', 'Flex', 'Bison']}
+                >
+                </Card>
+            </li>
+        -->
 
         <li class="lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <Card 
