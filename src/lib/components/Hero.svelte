@@ -4,7 +4,7 @@
 </script>
 <div>
     <header>
-        <h1 class="text-gradient-main text-5xl font-bold inline">Blake Smith</h1>
+        <h1 class="text-gradient-main text-4xl sm:text-5xl font-bold inline">Blake Smith</h1>
         <h2 class="text-2xl text-gradient-secondary mt-1 font-semibold sm:text-3xl">Software Engineer</h2>
         <h3 class="text-lg text-neutral-100 -mt-2 sm:text-xl">Full Stack | Machine Learning | Embedded Systems</h3>
     </header>
